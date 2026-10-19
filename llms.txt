@@ -1,0 +1,31 @@
+# The Steel-Structure Foundation & Anchor Bolt Field Guide
+
+> A 62-page field guide by Hicham Zein Eddine, Eng. (20+ years on sites in Lebanon, Qatar, the UAE, Poland and Canada) on setting anchor bolts for steel structures right the first time, from drawing review to grouted base plate. Price: CAD$30 on Gumroad: https://canadacorp.gumroad.com/l/anchor-bolt-guide
+
+Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, transmission towers and poles, telecom masts and monopoles, car-park shades and canopies.
+
+## Free articles
+
+- [How to make and use an anchor bolt template](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-template/): Why every anchor bolt group needs a template, how to fabricate it to match the column base plate, and why you should keep it to drill the base plates.
+- [ASTM F1554 Grade 36 vs 55 vs 105: which anchor bolt grade?](https://canadaservcorp-tech.github.io/anchors-book-/articles/astm-f1554-grades/): The three ASTM F1554 anchor bolt grades, their yield strengths and typical uses, how they relate to ISO 8.8 and 10.9, and why you must measure the diameter yourself.
+- [Anchor bolt setting tolerances: what is acceptable?](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-tolerances/): Typical anchor bolt tolerances for bolt group position, spacing, projection and top elevation, based on AISC and ACI 117 practice, and what to do when bolts fall outside them.
+- [Misaligned anchor bolts after casting: the correct fixes](https://canadaservcorp-tech.github.io/anchors-book-/articles/misaligned-anchor-bolts/): What to do when the bolt group does not line up with the base plate holes: under 6 mm, 6 to 12 mm, and over 12 mm. Why you should never bend anchor bolts.
+- [L-bolt and J-bolt hooks: which way should they face?](https://canadaservcorp-tech.github.io/anchors-book-/articles/l-bolt-j-bolt-hook-orientation/): Hooked anchor bolts must face the outside of the foundation. Plus the two-nuts-two-washers rule, embedment depth, and the tie-check-weld sequence.
+- [Pre-pour checklist for anchor bolts and foundations (final gate)](https://canadaservcorp-tech.github.io/anchors-book-/articles/pre-pour-checklist/): The final gate before casting a steel-structure foundation: bolts, formwork, rebar, spacers, cleaning, threads, access, lighting, vibrator and the inspector's signature.
+- [Pouring concrete around anchor bolts without moving them](https://canadaservcorp-tech.github.io/anchors-book-/articles/pouring-concrete-around-anchor-bolts/): Never aim the pump at the bolts, pour all ready foundations at once to avoid cold joints, and stop only at a designed construction joint.
+- [Base plate grouting: why it must be non-shrink grout](https://canadaservcorp-tech.github.io/anchors-book-/articles/base-plate-non-shrink-grout/): How the base plate sits on levelling nuts, why the gap must be filled with non-shrink grout (ASTM C1107), and how to fix grout voids under the plate.
+- [Protecting and repairing anchor bolt threads](https://canadaservcorp-tech.github.io/anchors-book-/articles/damaged-anchor-bolt-threads/): Tape the threads before casting, and how to fix concrete-coated, impact-damaged or severely damaged anchor bolt threads.
+- [SRC vs OPC: which cement for foundations?](https://canadaservcorp-tech.github.io/anchors-book-/articles/src-vs-opc-cement-foundations/): Sulfate-Resisting Cement below ground, Ordinary Portland Cement above ground, with typical grades for blinding, footings, tie beams and column necks.
+- [Your first site as a new engineer: earning the crew's respect](https://canadaservcorp-tech.github.io/anchors-book-/articles/first-day-on-site-new-engineer/): For engineering students and new graduates: how to work with tradesmen who have more years on site, avoid approval traps, and protect your word.
+
+## Free resources
+
+- [Pre-pour checklist (final gate)](https://canadaservcorp-tech.github.io/anchors-book-/checklist/): printable, no sign-up.
+
+## Book contents
+
+15 chapters: drawings, setting out, safe access, excavation, trench bottom, anti-termite treatment, polyethylene sheet, blinding, footing formwork, rebar, anchor bolts, base plate and grouting, post-installed anchors, QA/QC, troubleshooting; appendices on anchor-bolt specifications, concrete testing, inspection checklist and unit conversions.
+
+## Note
+
+This content is provided for professional educational use and does not replace a licensed structural engineer or the governing code for your jurisdiction. Always verify against the approved documents for your project.

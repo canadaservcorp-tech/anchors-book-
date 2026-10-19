@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Steel-Structure Foundation &amp; Anchor Bolt Field Guide</title>
+<meta name="description" content="A 62-page field guide for site engineers and engineering students: set anchor bolts right the first time, from drawing to grouted base plate. Template method, tolerances, QA/QC hold points, troubleshooting.">
+<link rel="canonical" href="https://canadaservcorp-tech.github.io/anchors-book-/">
+<meta name="author" content="Hicham Zein Eddine">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="book">
+<meta property="og:title" content="The Steel-Structure Foundation &amp; Anchor Bolt Field Guide">
+<meta property="og:description" content="A 62-page field guide for site engineers and engineering students: set anchor bolts right the first time, from drawing to grouted base plate. Template method, tolerances, QA/QC hold points, troubleshooting.">
+<meta property="og:url" content="https://canadaservcorp-tech.github.io/anchors-book-/">
+<meta property="og:image" content="https://canadaservcorp-tech.github.io/anchors-book-/img/og.jpg">
+<meta property="og:site_name" content="Anchor Bolt Field Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#0e203a">
+<link rel="icon" href="/anchors-book-/img/favicon.png">
+<style>
+:root{--navy:#0e203a;--navy2:#16304f;--gold:#f0aa3c;--ink:#1c2533;--muted:#5b6678;--bg:#f6f7f9;--line:#dde2ea}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
+a{color:#1d4f91}img{max-width:100%;height:auto;display:block}
+header.top{background:var(--navy);color:#fff}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{color:#fff;text-decoration:none;font-weight:800;letter-spacing:.3px}.brand span{color:var(--gold)}
+header nav a{color:#d7e0ee;text-decoration:none;margin-left:16px;font-size:15px}header nav a:hover{color:#fff}
+footer nav a{color:var(--muted);margin:0 4px}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:44px 0 52px}
+.hero .wrap{display:grid;grid-template-columns:1fr 260px;gap:36px;align-items:center}
+.hero h1{font-size:34px;line-height:1.2;margin:0 0 14px}.hero p{color:#d7e0ee;margin:0 0 18px}
+.kicker{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+.btn{display:inline-block;background:var(--gold);color:#13213a;font-weight:800;text-decoration:none;padding:13px 22px;border-radius:8px;margin:6px 0}
+.btn:hover{filter:brightness(1.05)}.btn.ghost{background:transparent;color:#fff;border:2px solid #ffffff55}
+.price{color:#fff;font-weight:700;margin-left:10px}
+main{padding:34px 0 10px}main h1{font-size:30px;line-height:1.25;margin:.2em 0 .5em}
+h2{font-size:23px;margin:1.6em 0 .5em;color:var(--navy)}h3{font-size:19px;margin:1.3em 0 .4em}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:18px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.grid a.card{display:block;text-decoration:none;color:inherit;margin:0}.grid a.card:hover{border-color:var(--gold)}
+.grid h3{margin:0 0 6px;font-size:17px;color:var(--navy)}.grid p{margin:0;color:var(--muted);font-size:15px}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:15px;margin:12px 0}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}th{background:var(--navy);color:#fff}
+.note{font-size:14px;color:var(--muted)}
+.key{border-left:4px solid var(--gold);background:#fff;padding:14px 18px;border-radius:0 10px 10px 0;margin:18px 0}
+.cta{background:var(--navy);color:#fff;border-radius:14px;padding:24px;margin:30px 0;display:grid;grid-template-columns:110px 1fr;gap:20px;align-items:center}
+.cta p{margin:.2em 0;color:#d7e0ee}.cta strong{color:#fff}
+figure{margin:18px 0}figure img{border:1px solid var(--line);border-radius:8px;background:#fff}figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+.pages{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.crumbs{font-size:14px;color:var(--muted)}.crumbs a{color:var(--muted)}
+.faq dt{font-weight:700;margin-top:14px}.faq dd{margin:4px 0 0}
+footer{color:var(--muted);font-size:14px;padding:30px 0 40px;border-top:1px solid var(--line);margin-top:30px}
+ul.check{list-style:none;padding:0}ul.check li{padding:9px 0 9px 34px;border-bottom:1px solid var(--line);position:relative}
+ul.check li:before{content:"";position:absolute;left:2px;top:12px;width:18px;height:18px;border:2px solid var(--navy);border-radius:3px}
+@media(max-width:720px){.hero .wrap{grid-template-columns:1fr}.hero .cover{max-width:220px}.hero h1{font-size:27px}.cta{grid-template-columns:1fr}.cta img{max-width:110px}nav a{margin:0 14px 0 0}}
+@media print{header.top,.cta,.btn,footer nav,.noprint{display:none!important}body{background:#fff;font-size:13pt}.card{border:0;padding:0}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "The Steel-Structure Foundation & Anchor Bolt Field Guide", "author": {"@type": "Person", "name": "Hicham Zein Eddine", "honorificSuffix": "Eng.", "description": "Civil engineer with 20+ years of international project experience (Lebanon, Qatar, UAE, Poland, Canada)."}, "bookFormat": "https://schema.org/EBook", "numberOfPages": 62, "inLanguage": "en", "datePublished": "2026", "bookEdition": "First Edition", "image": "https://canadaservcorp-tech.github.io/anchors-book-/img/cover.jpg", "url": "https://canadaservcorp-tech.github.io/anchors-book-/", "about": ["Anchor bolts", "Steel structure foundations", "Base plate grouting", "Construction QA/QC"], "audience": {"@type": "Audience", "audienceType": "Site engineers, structural engineers, QA/QC inspectors, engineering students"}, "offers": {"@type": "Offer", "price": "30.00", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "url": "https://canadacorp.gumroad.com/l/anchor-bolt-guide"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Anchor Bolt Field Guide", "url": "https://canadaservcorp-tech.github.io/anchors-book-/"}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/anchors-book-/">Anchor Bolt <span>Field Guide</span></a>
+<nav><a href="/anchors-book-/articles/">Articles</a><a href="/anchors-book-/checklist/">Free checklist</a><a href="https://canadacorp.gumroad.com/l/anchor-bolt-guide?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=nav">Get the book</a></nav>
+</div></header>
+<section class="hero"><div class="wrap">
+<div><p class="kicker">Field guide · Site execution · 62 pages</p>
+<h1>Set anchor bolts right the first time, from drawing to grouted base plate.</h1>
+<p>They taught you how to design a foundation. This guide shows you how to build one: the exact site sequence, the template method, QA/QC hold points and the fixes when something goes wrong.</p>
+<a class="btn" href="https://canadacorp.gumroad.com/l/anchor-bolt-guide?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=home-hero">Get the full 62-page guide &rarr;</a><span class="price">CAD$30 · PDF</span><br>
+<a class="btn ghost" href="/anchors-book-/checklist/">Free pre-pour checklist</a></div>
+<img class="cover" src="/anchors-book-/img/cover.jpg" alt="Cover of The Steel-Structure Foundation & Anchor Bolt Field Guide" width="260"></div></section>
+<main><div class="wrap">
+<h2>Who it is for</h2>
+<p>Site engineers, structural engineers, QA/QC inspectors, and engineering students who want to walk onto a site on day one knowing what to do.</p>
+<h2>What is inside</h2>
+<ul>
+<li><strong>The complete site sequence:</strong> drawings, survey, excavation, blinding, rebar, anchor bolts, base plate, grouting.</li>
+<li><strong>The anchor-bolt template method:</strong> fabricate it, set embedment, orient L/J-bolts, hold the pattern rigid through the pour.</li>
+<li><strong>QA/QC:</strong> ten mandatory hold points and a pre-pour final-gate checklist.</li>
+<li><strong>Troubleshooting:</strong> misaligned bolts, damaged threads, low concrete strength, grout voids.</li>
+<li><strong>Standards behind every step:</strong> ACI, AISC, BS EN, ASTM, ISO.</li>
+<li><strong>Site politics:</strong> how to lead experienced crews and protect your word.</li>
+</ul>
+<p>Works for every metal structure: PEB, hot-rolled frames, warehouses, transmission towers and poles, monopoles, car-park shades and canopies.</p>
+<h2>Look inside</h2>
+<div class="pages"><figure><img src="/anchors-book-/img/p-contents.jpg" alt="Contents: 15 chapters and appendices" loading="lazy"><figcaption>Contents: 15 chapters and appendices</figcaption></figure><figure><img src="/anchors-book-/img/p-standards.jpg" alt="Reference standards and codes" loading="lazy"><figcaption>Reference standards and codes</figcaption></figure><figure><img src="/anchors-book-/img/p-template.jpg" alt="The template serves twice" loading="lazy"><figcaption>The template serves twice</figcaption></figure><figure><img src="/anchors-book-/img/p-qaqc.jpg" alt="QA/QC hold points and checklist" loading="lazy"><figcaption>QA/QC hold points and checklist</figcaption></figure><figure><img src="/anchors-book-/img/p-troubleshooting.jpg" alt="Troubleshooting and field fixes" loading="lazy"><figcaption>Troubleshooting and field fixes</figcaption></figure></div>
+<h2>About the author</h2>
+<p>Hicham Zein Eddine, Eng. is a civil engineer with more than 20 years of international project experience in Lebanon, Qatar, the UAE, Poland and Canada.</p>
+<h2>Free articles</h2>
+<div class="grid"><a class="card" href="/anchors-book-/articles/anchor-bolt-template/"><h3>How to make and use an anchor bolt template</h3><p>Why every anchor bolt group needs a template, how to fabricate it to match the column base plate, and why you …</p></a><a class="card" href="/anchors-book-/articles/astm-f1554-grades/"><h3>ASTM F1554 Grade 36 vs 55 vs 105: which anchor bolt grade?</h3><p>The three ASTM F1554 anchor bolt grades, their yield strengths and typical uses, how they relate to ISO 8.8 an…</p></a><a class="card" href="/anchors-book-/articles/anchor-bolt-tolerances/"><h3>Anchor bolt setting tolerances: what is acceptable?</h3><p>Typical anchor bolt tolerances for bolt group position, spacing, projection and top elevation, based on AISC a…</p></a><a class="card" href="/anchors-book-/articles/misaligned-anchor-bolts/"><h3>Misaligned anchor bolts after casting: the correct fixes</h3><p>What to do when the bolt group does not line up with the base plate holes: under 6 mm, 6 to 12 mm, and over 12…</p></a><a class="card" href="/anchors-book-/articles/l-bolt-j-bolt-hook-orientation/"><h3>L-bolt and J-bolt hooks: which way should they face?</h3><p>Hooked anchor bolts must face the outside of the foundation. Plus the two-nuts-two-washers rule, embedment dep…</p></a><a class="card" href="/anchors-book-/articles/pre-pour-checklist/"><h3>Pre-pour checklist for anchor bolts and foundations (final gate)</h3><p>The final gate before casting a steel-structure foundation: bolts, formwork, rebar, spacers, cleaning, threads…</p></a></div>
+<p><a href="/anchors-book-/articles/">All articles &rarr;</a></p>
+<div style="text-align:center;margin:30px 0"><a class="btn" href="https://canadacorp.gumroad.com/l/anchor-bolt-guide?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=home-bottom">Get the full 62-page guide &rarr;</a></div>
+</div></main>
+<footer><div class="wrap">
+<p>This content is provided for professional educational use and does not replace a licensed structural engineer or the governing code for your jurisdiction. Always verify against the approved documents for your project.</p>
+<p>&copy; 2026 Hicham Zein Eddine, Eng.. Content adapted from <em>The Steel-Structure Foundation & Anchor Bolt Field Guide</em>.</p>
+<nav><a href="/anchors-book-/">Home</a> &middot; <a href="/anchors-book-/articles/">Articles</a> &middot; <a href="/anchors-book-/checklist/">Free pre-pour checklist</a> &middot; <a href="https://canadacorp.gumroad.com/l/anchor-bolt-guide">Buy the guide</a></nav>
+</div></footer>
+</body>
+</html>
