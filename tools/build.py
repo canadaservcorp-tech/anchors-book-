@@ -98,7 +98,9 @@ def page(path, title, desc, body, jsonld=None, og_type="article", image="img/og.
 <p>{DISCLAIMER}</p>
 <p>&copy; 2026 {AUTHOR}. Content adapted from <em>{TITLE}</em>.</p>
 <nav><a href="{BASE}/">Home</a> &middot; <a href="{BASE}/articles/">Articles</a> &middot; <a href="{BASE}/checklist/">Free pre-pour checklist</a> &middot; <a href="{GUMROAD}">Buy the guide</a></nav>
+<p class="credit">Website by <a href="https://www.ateliersurmesure.ca">Atelier Sur Mesure</a></p>
 </div></footer>
+<script src="https://www.ateliersurmesure.ca/t.js" defer></script>
 </body>
 </html>
 """
