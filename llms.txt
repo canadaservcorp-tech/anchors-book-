@@ -1,6 +1,6 @@
 # The Steel-Structure Foundation & Anchor Bolt Field Guide
 
-> A 62-page field guide by Hicham Zein Eddine, Eng. (20+ years on sites in Lebanon, Qatar, the UAE, Poland and Canada) on setting anchor bolts for steel structures right the first time, from drawing review to grouted base plate. Price: CAD$30 on Gumroad: https://canadacorp.gumroad.com/l/anchor-bolt-guide
+> A 62-page field guide by Hicham Zein Eddine (20+ years on sites in Lebanon, Qatar, the UAE, Poland and Canada) on setting anchor bolts for steel structures right the first time, from drawing review to grouted base plate. Price: CAD$30 on Gumroad: https://canadacorp.gumroad.com/l/anchor-bolt-guide
 
 Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, transmission towers and poles, telecom masts and monopoles, car-park shades and canopies.
 
@@ -17,6 +17,11 @@ Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, 
 - [Protecting and repairing anchor bolt threads](https://canadaservcorp-tech.github.io/anchors-book-/articles/damaged-anchor-bolt-threads/): Tape the threads before casting, and how to fix concrete-coated, impact-damaged or severely damaged anchor bolt threads.
 - [SRC vs OPC: which cement for foundations?](https://canadaservcorp-tech.github.io/anchors-book-/articles/src-vs-opc-cement-foundations/): Sulfate-Resisting Cement below ground, Ordinary Portland Cement above ground, with typical grades for blinding, footings, tie beams and column necks.
 - [Your first site as a new engineer: earning the crew's respect](https://canadaservcorp-tech.github.io/anchors-book-/articles/first-day-on-site-new-engineer/): For engineering students and new graduates: how to work with tradesmen who have more years on site, avoid approval traps, and protect your word.
+- [Anchor bolt embedment depth: how deep should anchor bolts go?](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-embedment-depth/): Embedment depth is a design value, not a site estimate. The common 10 x diameter rule of thumb, what governs the real figure (ACI 318 Ch. 17, EN 1992-4) and how to hold it during the pour.
+- [Levelling nuts or shims under a column base plate?](https://canadaservcorp-tech.github.io/anchors-book-/articles/base-plate-levelling-nuts-shims/): Why the base plate sits above the concrete on levelling nuts or shims, how the gap is used to level and plumb the column, the tolerances to check, and why the gap is then filled with non-shrink grout.
+- [Post-installed anchors: chemical vs mechanical vs undercut](https://canadaservcorp-tech.github.io/anchors-book-/articles/post-installed-anchors-chemical-vs-mechanical/): When you need drilled-in anchors instead of cast-in bolts, how chemical, expansion and undercut anchors work, the standards behind them, and the installation rules that prevent failures.
+- [Steel structure foundation sequence: from drawing to grouted base plate](https://canadaservcorp-tech.github.io/anchors-book-/articles/steel-structure-foundation-sequence/): The site sequence for PEB, warehouse, tower and canopy foundations in 15 steps: drawings, survey, access, excavation, blinding, formwork, rebar, anchor bolts, base plate, grout, QA/QC and fixes.
+- [Anchor bolts for poles, towers and canopies under uplift](https://canadaservcorp-tech.github.io/anchors-book-/articles/pole-tower-anchor-bolts-uplift/): Telecom masts, transmission towers, lighting poles and open canopies put anchor bolts in tension. What changes on site: embedment, hook orientation, grout and tolerances.
 
 ## Free resources
 

@@ -8,7 +8,7 @@ SITE = "https://canadaservcorp-tech.github.io/anchors-book-"
 BASE = "/anchors-book-"
 GUMROAD = "https://canadacorp.gumroad.com/l/anchor-bolt-guide"
 TITLE = "The Steel-Structure Foundation & Anchor Bolt Field Guide"
-AUTHOR = "Hicham Zein Eddine, Eng."
+AUTHOR = "Hicham Zein Eddine"
 AUTHOR_NAME = "Hicham Zein Eddine"
 UPDATED = "2026-10-19"
 DISCLAIMER = ("This content is provided for professional educational use and does not replace a licensed "
@@ -111,8 +111,8 @@ def cta(campaign):
 <p>62 pages, the full site sequence from drawing to grouted base plate: survey, excavation, blinding, rebar, the anchor-bolt template, QA/QC hold points and field fixes. Written by a civil engineer with 20+ years on sites in Lebanon, Qatar, the UAE, Poland and Canada.</p>
 {buy(campaign)}</div></div>"""
 
-AUTHOR_LD = {"@type": "Person", "name": AUTHOR_NAME, "honorificSuffix": "Eng.",
-             "description": "Civil engineer with 20+ years of international project experience (Lebanon, Qatar, UAE, Poland, Canada)."}
+AUTHOR_LD = {"@type": "Person", "name": AUTHOR_NAME,
+             "description": "Civil engineer registered in Lebanon and New Zealand, with 20+ years of project experience (Lebanon, Qatar, UAE, Poland, Canada)."}
 
 def article_ld(a):
     return [{
