@@ -30,7 +30,7 @@ HOME_BODY = f"""<section class="hero"><div class="wrap">
 <h2>Look inside</h2>
 <div class="pages">{gallery}</div>
 <h2>About the author</h2>
-<p>{AUTHOR} is a civil engineer with more than 20 years of international project experience in Lebanon, Qatar, the UAE, Poland and Canada.</p>
+<p>{AUTHOR} has more than 20 years of steel-structure and foundation site experience in Qatar, the UAE, Poland and Canada.</p>
 <h2>Free articles</h2>
 <div class="grid">{cards}</div>
 <p><a href="{BASE}/articles/">All articles &rarr;</a></p>

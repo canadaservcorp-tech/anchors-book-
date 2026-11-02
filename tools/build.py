@@ -108,11 +108,11 @@ def page(path, title, desc, body, jsonld=None, og_type="article", image="img/og.
 def cta(campaign):
     return f"""<div class="cta"><img src="{BASE}/img/cover.jpg" alt="Cover of the Anchor Bolt Field Guide" width="110" loading="lazy">
 <div><p><strong>{TITLE}</strong></p>
-<p>62 pages, the full site sequence from drawing to grouted base plate: survey, excavation, blinding, rebar, the anchor-bolt template, QA/QC hold points and field fixes. Written by a civil engineer with 20+ years on sites in Lebanon, Qatar, the UAE, Poland and Canada.</p>
+<p>62 pages, the full site sequence from drawing to grouted base plate: survey, excavation, blinding, rebar, the anchor-bolt template, QA/QC hold points and field fixes. Written by Hicham Zein Eddine, from 20+ years on steel-structure and foundation sites in Qatar, the UAE, Poland and Canada.</p>
 {buy(campaign)}</div></div>"""
 
 AUTHOR_LD = {"@type": "Person", "name": AUTHOR_NAME,
-             "description": "Civil engineer registered in Lebanon and New Zealand, with 20+ years of project experience (Lebanon, Qatar, UAE, Poland, Canada)."}
+             "description": "20+ years of steel-structure and foundation site experience (Qatar, UAE, Poland, Canada)."}
 
 def article_ld(a):
     return [{
