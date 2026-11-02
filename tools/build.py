@@ -8,7 +8,7 @@ SITE = "https://canadaservcorp-tech.github.io/anchors-book-"
 BASE = "/anchors-book-"
 GUMROAD = "https://canadacorp.gumroad.com/l/anchor-bolt-guide"
 TITLE = "The Steel-Structure Foundation & Anchor Bolt Field Guide"
-AUTHOR = "Hicham Zein Eddine, Eng."
+AUTHOR = "Hicham Zein Eddine"
 AUTHOR_NAME = "Hicham Zein Eddine"
 UPDATED = "2026-10-19"
 DISCLAIMER = ("This content is provided for professional educational use and does not replace a licensed "
@@ -108,11 +108,11 @@ def page(path, title, desc, body, jsonld=None, og_type="article", image="img/og.
 def cta(campaign):
     return f"""<div class="cta"><img src="{BASE}/img/cover.jpg" alt="Cover of the Anchor Bolt Field Guide" width="110" loading="lazy">
 <div><p><strong>{TITLE}</strong></p>
-<p>62 pages, the full site sequence from drawing to grouted base plate: survey, excavation, blinding, rebar, the anchor-bolt template, QA/QC hold points and field fixes. Written by a civil engineer with 20+ years on sites in Lebanon, Qatar, the UAE, Poland and Canada.</p>
+<p>62 pages, the full site sequence from drawing to grouted base plate: survey, excavation, blinding, rebar, the anchor-bolt template, QA/QC hold points and field fixes. Written by Hicham Zein Eddine, from 20+ years on steel-structure and foundation sites in Qatar, the UAE, Poland and Canada.</p>
 {buy(campaign)}</div></div>"""
 
-AUTHOR_LD = {"@type": "Person", "name": AUTHOR_NAME, "honorificSuffix": "Eng.",
-             "description": "Civil engineer with 20+ years of international project experience (Lebanon, Qatar, UAE, Poland, Canada)."}
+AUTHOR_LD = {"@type": "Person", "name": AUTHOR_NAME,
+             "description": "20+ years of steel-structure and foundation site experience (Qatar, UAE, Poland, Canada)."}
 
 def article_ld(a):
     return [{
@@ -180,7 +180,7 @@ def build():
             "Perplexity-User", "Google-Extended", "Applebot-Extended", "Bingbot", "DuckAssistBot", "Meta-ExternalAgent", "CCBot"]
     # GitHub Pages serves robots.txt only at the user-site root, so this file documents intent; the meta robots tag governs.
     write("robots.txt", "".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots) + f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
-    llms = [f"# {TITLE}", "", f"> A 62-page field guide by {AUTHOR} (20+ years on sites in Lebanon, Qatar, the UAE, Poland and Canada) "
+    llms = [f"# {TITLE}", "", f"> A 62-page field guide by {AUTHOR} (20+ years on steel-structure and foundation sites in Qatar, the UAE, Poland and Canada) "
             "on setting anchor bolts for steel structures right the first time, from drawing review to grouted base plate. "
             f"Price: CAD$30 on Gumroad: {GUMROAD}", "",
             "Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, transmission towers and poles, telecom masts and monopoles, car-park shades and canopies.",

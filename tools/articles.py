@@ -312,4 +312,156 @@ ARTICLES = [
 ],
 "related": ["pre-pour-checklist", "anchor-bolt-template", "misaligned-anchor-bolts"],
 },
+{
+"slug": "anchor-bolt-embedment-depth",
+"title": "Anchor bolt embedment depth: how deep should anchor bolts go?",
+"desc": "Embedment depth is a design value, not a site estimate. The common 10 x diameter rule of thumb, what governs the real figure (ACI 318 Ch. 17, EN 1992-4) and how to hold it during the pour.",
+"chapter": 11, "img": "p-standards",
+"answer": "Anchor bolt embedment depth is set by the structural design (ACI 318 Chapter 17 or EN 1992-4 calculations for the actual load case). A common field rule of thumb is at least about 10 times the bolt diameter, with an edge distance of at least about 5 times the diameter, but these are not code minimums: always read the depth from the drawing and set the bolts to it exactly.",
+"body": """
+<p>The embedment depth is what lets an anchor bolt develop its capacity and transfer the column's load into the foundation. It is a structural value. It is never a figure to estimate on site.</p>
+<h2>Rule of thumb vs design value</h2>
+<table><tr><th>Item</th><th>Field rule of thumb</th><th>What actually governs</th></tr>
+<tr><td>Embedment depth</td><td>About 10 x bolt diameter (minimum)</td><td>Design drawing (ACI 318 Ch. 17 / EN 1992-4)</td></tr>
+<tr><td>Edge distance</td><td>About 5 x bolt diameter (minimum)</td><td>Design drawing</td></tr></table>
+<p class="note">Appendix A of the guide. The rules of thumb help you spot an obvious error on a drawing or on site; they never replace the design figure.</p>
+<h2>Why it matters most under uplift</h2>
+<p>On PEB portals under wind suction, cantilevered poles and open canopies, the bolts are not only holding the column down. They resist pull-out forces that try to overturn it. There the embedment, the outward orientation of L- and J-bolt hooks and the non-shrink grout under the base plate become structural elements, not installation details.</p>
+<h2>Holding the depth on site</h2>
+<ol>
+<li>Read the required embedment and projection from the drawing before the template is made.</li>
+<li>Fit two nuts and two washers per bolt, one set below the template and one above, so the bolt is clamped and its height can be adjusted.</li>
+<li>Set the depth by the nuts: no more, no less than the drawing.</li>
+<li>Check the top level of every bolt again just before the pour, then protect the bolts while the concrete is placed.</li>
+</ol>
+""",
+"faq": [
+("What is the minimum embedment depth for an anchor bolt?", "It is set by the structural design for the load case. A common field rule of thumb is at least about 10 times the bolt diameter, but that is not a code minimum; use the figure on the drawing."),
+("Which code governs anchor bolt embedment?", "ACI 318 Chapter 17 in North America and EN 1992-4 in Europe, through calculations for the specific load case."),
+("Can the site change the embedment depth?", "No. Embedment is a structural value. Any change must come from the structural engineer, in writing."),
+],
+"related": ["astm-f1554-grades", "l-bolt-j-bolt-hook-orientation", "anchor-bolt-template"],
+},
+{
+"slug": "base-plate-levelling-nuts-shims",
+"title": "Levelling nuts or shims under a column base plate?",
+"desc": "Why the base plate sits above the concrete on levelling nuts or shims, how the gap is used to level and plumb the column, the tolerances to check, and why the gap is then filled with non-shrink grout.",
+"chapter": 12, "img": "p-grout",
+"answer": "The column base plate is not seated directly on the concrete. It sits slightly above the foundation on levelling nuts (or shims) on the anchor bolts, leaving a deliberate gap. The nuts are adjusted until the plate is level and the column plumb, the nuts are tightened, and the gap is then filled with non-shrink grout.",
+"body": """
+<p>The column arrives with its base plate welded on, drilled to the same pattern as the anchor bolts. The plate drops over the projecting bolts, and the column is brought to its correct position and level.</p>
+<h2>Why there is a gap</h2>
+<ul>
+<li>The plate sits on <strong>levelling nuts or shims</strong>, not on the concrete.</li>
+<li>The gap lets you level and align the column exactly, adjusting until the plate is level and the column is plumb, before anything is made permanent.</li>
+<li>Once the column is levelled, plumbed and the nuts are tightened, the gap is ready for grout.</li>
+</ul>
+<h2>Tolerances to check before grouting</h2>
+<table><tr><th>Item</th><th>Typical tolerance</th></tr>
+<tr><td>Bolt group centre from column centre-line</td><td>&plusmn;6 mm</td></tr>
+<tr><td>Spacing between bolts within a group</td><td>&plusmn;3 mm</td></tr>
+<tr><td>Bolt projection above concrete</td><td>+25 mm / &minus;6 mm (per detail)</td></tr>
+<tr><td>Bolt top elevation</td><td>&plusmn;13 mm</td></tr></table>
+<p class="note">Table 12.1 of the guide: representative values. Always verify against the project specification.</p>
+<h2>Then grout</h2>
+<p>The gap is filled with non-shrink grout so the plate bears evenly on the foundation. Ordinary mortar shrinks and leaves voids under the plate; see the grouting article for why non-shrink grout is required.</p>
+""",
+"faq": [
+("Should a base plate sit directly on the concrete?", "No. It sits slightly above the foundation on levelling nuts or shims, leaving a gap that is used to level and plumb the column and is then grouted."),
+("When is the gap under the base plate grouted?", "After the column is levelled, plumbed and the nuts are tightened."),
+("What tolerance applies to anchor bolt projection?", "A typical value is +25 mm / -6 mm per the detail, but the project specification governs."),
+],
+"related": ["base-plate-non-shrink-grout", "anchor-bolt-tolerances", "misaligned-anchor-bolts"],
+},
+{
+"slug": "post-installed-anchors-chemical-vs-mechanical",
+"title": "Post-installed anchors: chemical vs mechanical vs undercut",
+"desc": "When you need drilled-in anchors instead of cast-in bolts, how chemical, expansion and undercut anchors work, the standards behind them, and the installation rules that prevent failures.",
+"chapter": 13, "img": "p-troubleshooting",
+"answer": "Post-installed anchors are drilled and fixed into concrete that has already cured (ACI 318 Chapter 17, EN 1992-4). Chemical anchors bond a bolt with injected epoxy or vinylester resin (ACI 355.4, ETAG 001); mechanical expansion anchors expand against the hole (ACI 355.2); undercut anchors expand into a shaped undercut for the highest capacity (ACI 355.2). They are a repair or an addition, never a substitute for correctly set cast-in bolts.",
+"body": """
+<p>Cast-in anchor bolts, set before the concrete is poured, are always the strongest and preferred method. Post-installed anchors are for situations where that was not possible: bolts were missed, a new attachment must be added to hardened concrete, or a repair is needed.</p>
+<h2>The three types</h2>
+<table><tr><th>Type</th><th>How it works</th><th>Key standards</th></tr>
+<tr><td>Chemical (adhesive)</td><td>Epoxy or vinylester resin is injected into a drilled hole; the bolt is inserted and the resin cures to bond it.</td><td>ACI 355.4, ETAG 001</td></tr>
+<tr><td>Mechanical expansion</td><td>A wedge- or sleeve-type anchor expands against the hole.</td><td>ACI 355.2</td></tr>
+<tr><td>Undercut</td><td>The anchor expands into an undercut at the base of a specially shaped hole, for the highest capacity.</td><td>ACI 355.2</td></tr></table>
+<h2>Installation rules</h2>
+<ul>
+<li><strong>Edge distance and spacing:</strong> meet the manufacturer's and ACI 318 minimums. Too close to an edge and the concrete can blow out under load.</li>
+<li><strong>Clean holes for chemical anchors:</strong> correct hole diameter, brush and compressed air twice, the specified volume of adhesive with no air gaps. A dirty hole is the most common cause of adhesive-anchor failure.</li>
+<li><strong>Exact torque for mechanical anchors:</strong> under-torqued, the anchor slips; over-torqued, it damages the concrete or the anchor.</li>
+<li><strong>Load testing:</strong> for critical applications, field pull-out tests (ASTM E488) may be required before the connection is accepted.</li>
+</ul>
+<div class="key">A post-installed anchor is a repair or an addition, not a substitute for planning. A correctly set cast-in bolt is always stronger and cheaper than fixing a missed one later.</div>
+""",
+"faq": [
+("Are chemical anchors as strong as cast-in anchor bolts?", "Cast-in bolts set before the pour are always the strongest and preferred method. Post-installed anchors are for repairs and additions, designed per ACI 318 Chapter 17 or EN 1992-4."),
+("What is the most common cause of chemical anchor failure?", "A dirty hole. Clean it thoroughly with a brush and compressed air, twice, before injecting the adhesive."),
+("How are post-installed anchors tested on site?", "For critical applications, by field pull-out tests per ASTM E488 when the specification requires them."),
+],
+"related": ["misaligned-anchor-bolts", "anchor-bolt-embedment-depth", "pre-pour-checklist"],
+},
+{
+"slug": "steel-structure-foundation-sequence",
+"title": "Steel structure foundation sequence: from drawing to grouted base plate",
+"desc": "The site sequence for PEB, warehouse, tower and canopy foundations in 15 steps: drawings, survey, access, excavation, blinding, formwork, rebar, anchor bolts, base plate, grout, QA/QC and fixes.",
+"chapter": 1, "img": "p-contents",
+"answer": "For PEB buildings, steel frames, warehouses, towers, poles and canopies the foundation workflow is the same: verify the drawings, set out with the surveyor, make the site safe, excavate, prepare the trench bottom, lay the polyethylene sheet and blinding, build the footing formwork, fix the rebar, set the anchor bolts in a template, then place the base plate on levelling nuts and grout it, with QA/QC hold points throughout.",
+"body": """
+<p>Whether you are building a pre-engineered building (PEB), a hot-rolled frame, a metal warehouse, a transmission tower, a telecom mast, a car-park shade or a lighting pole, the anchor-bolt workflow is the same. The bolts must be set to the exact pattern, at the precise level, with the correct embedment, and held rigidly during casting.</p>
+<h2>The sequence</h2>
+<ol>
+<li><strong>Before the site:</strong> read and verify the drawings.</li>
+<li><strong>Setting out:</strong> the surveyor turns the drawing into points, lines and benchmarks on the ground.</li>
+<li><strong>Safe access</strong> to the site.</li>
+<li><strong>Excavation</strong> and spoil management.</li>
+<li><strong>Preparing the trench bottom.</strong></li>
+<li><strong>Anti-termite soil treatment</strong> where the region requires it.</li>
+<li><strong>Polyethylene sheet.</strong></li>
+<li><strong>Blinding</strong> (lean concrete), set to level with the surveyor.</li>
+<li><strong>Footing formwork</strong> on the surveyor's new marks.</li>
+<li><strong>Reinforcement.</strong></li>
+<li><strong>Anchor bolts</strong> in a template: pattern, level, embedment, hook orientation.</li>
+<li><strong>Base plate and grouting:</strong> levelling nuts, plumb column, non-shrink grout.</li>
+<li><strong>Post-installed anchors</strong>, only for repairs and additions.</li>
+<li><strong>QA/QC hold points</strong> from pre-blinding to post-curing.</li>
+<li><strong>Troubleshooting and field fixes.</strong></li>
+</ol>
+<p class="note">These are the 15 chapters of the guide.</p>
+<h2>Casting before the steel arrives</h2>
+<p>Steel is fabricated in the workshop for weeks or months before delivery. Waiting for it before starting the foundations would cripple the schedule. An accurate template, made from the base-plate detail and later used to drill the plates, lets the foundations be cast first with the confidence that the steel will fit.</p>
+""",
+"faq": [
+("What is the construction sequence for a PEB foundation?", "Drawings, survey, excavation, trench bottom, polyethylene sheet, blinding, formwork, rebar, anchor bolts in a template, concrete, then base plate on levelling nuts and non-shrink grout, with QA/QC hold points throughout."),
+("Can foundations be cast before the steel is delivered?", "Yes, if the anchor bolts are set with an accurate template made from the base-plate detail. The same template is then used to drill the base plates."),
+("Is the sequence different for towers and poles?", "No. The anchor-bolt workflow is the same; uplift and overturning make embedment, hook orientation and grout even more critical."),
+],
+"related": ["pre-pour-checklist", "anchor-bolt-template", "first-day-on-site-new-engineer"],
+},
+{
+"slug": "pole-tower-anchor-bolts-uplift",
+"title": "Anchor bolts for poles, towers and canopies under uplift",
+"desc": "Telecom masts, transmission towers, lighting poles and open canopies put anchor bolts in tension. What changes on site: embedment, hook orientation, grout and tolerances.",
+"chapter": 11, "img": "p-hooks",
+"answer": "On cantilevered poles, masts, towers, PEB portals under wind suction and open canopies, anchor bolts resist pull-out forces that try to overturn the structure. The embedment depth from the design, the outward orientation of L- and J-bolt hooks and full non-shrink grout under the base plate become critical structural elements, and the bolt group must still match the base plate exactly.",
+"body": """
+<p>For most buildings the anchor bolts hold the column down and locate it. For a pole, a mast or an open canopy, wind tries to overturn the structure, and the bolts on one side are pulled out of the concrete. They are working in tension.</p>
+<h2>What becomes critical</h2>
+<ul>
+<li><strong>Embedment depth:</strong> exactly as designed. It is what lets the bolt develop its pull-out capacity.</li>
+<li><strong>Hook orientation:</strong> L- and J-bolt hooks always face toward the outside of the foundation. Turned the wrong way, the bolt looks the same from above but is not anchored as the design assumed.</li>
+<li><strong>Non-shrink grout</strong> under the base plate, so the plate bears evenly.</li>
+<li><strong>The pattern:</strong> a template with the exact number, diameter, spacing and arrangement of holes, aligned to the surveyed centre point.</li>
+</ul>
+<h2>Typical structures</h2>
+<p>Electric transmission towers and poles, telecommunication masts and monopoles, lighting poles, traffic-signal masts, sign supports, car-park shades and service canopies.</p>
+""",
+"faq": [
+("Why are anchor bolts critical for telecom masts and poles?", "Wind-induced overturning puts the bolts in tension, so they resist pull-out. Embedment, hook orientation and grout then decide whether the structure holds."),
+("Which way should J-bolt hooks face on a pole foundation?", "Toward the outside of the foundation, away from the centre."),
+("Is the installation method different for poles?", "The workflow is the same as for buildings, but tension makes the embedment, orientation and grout checks more critical."),
+],
+"related": ["l-bolt-j-bolt-hook-orientation", "anchor-bolt-embedment-depth", "base-plate-non-shrink-grout"],
+},
 ]
