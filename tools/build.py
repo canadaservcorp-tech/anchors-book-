@@ -7,6 +7,7 @@ OUT = ROOT
 SITE = "https://canadaservcorp-tech.github.io/anchors-book-"
 BASE = "/anchors-book-"
 GUMROAD = "https://canadacorp.gumroad.com/l/anchor-bolt-guide"
+AMAZON = "https://www.amazon.com/dp/B0HD6LLW8G"
 TITLE = "The Steel-Structure Foundation & Anchor Bolt Field Guide"
 AUTHOR = "Hicham Zein Eddine"
 AUTHOR_NAME = "Hicham Zein Eddine"
@@ -17,7 +18,8 @@ DISCLAIMER = ("This content is provided for professional educational use and doe
 
 def buy(campaign, label="Get the full 62-page guide"):
     return (f'<a class="btn" href="{GUMROAD}?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign={campaign}">'
-            f'{label} &rarr;</a>')
+            f'{label} &rarr;</a> '
+            f'<a class="btn amz" href="{AMAZON}" rel="noopener">Kindle edition on Amazon</a>')
 
 CSS = """
 :root{--navy:#0e203a;--navy2:#16304f;--gold:#f0aa3c;--ink:#1c2533;--muted:#5b6678;--bg:#f6f7f9;--line:#dde2ea}
@@ -35,7 +37,7 @@ footer nav a{color:var(--muted);margin:0 4px}
 .hero h1{font-size:34px;line-height:1.2;margin:0 0 14px}.hero p{color:#d7e0ee;margin:0 0 18px}
 .kicker{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase}
 .btn{display:inline-block;background:var(--gold);color:#13213a;font-weight:800;text-decoration:none;padding:13px 22px;border-radius:8px;margin:6px 0}
-.btn:hover{filter:brightness(1.05)}.btn.ghost{background:transparent;color:#fff;border:2px solid #ffffff55}
+.btn:hover{filter:brightness(1.05)}.btn.amz{background:#fff;color:#13213a;border:2px solid #13213a;padding:11px 20px;margin-left:6px}.btn.ghost{background:transparent;color:#fff;border:2px solid #ffffff55}
 .price{color:#fff;font-weight:700;margin-left:10px}
 main{padding:34px 0 10px}main h1{font-size:30px;line-height:1.25;margin:.2em 0 .5em}
 h2{font-size:23px;margin:1.6em 0 .5em;color:var(--navy)}h3{font-size:19px;margin:1.3em 0 .4em}
@@ -182,7 +184,7 @@ def build():
     write("robots.txt", "".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots) + f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
     llms = [f"# {TITLE}", "", f"> A 62-page field guide by {AUTHOR} (20+ years on steel-structure and foundation sites in Qatar, the UAE, Poland and Canada) "
             "on setting anchor bolts for steel structures right the first time, from drawing review to grouted base plate. "
-            f"Price: CAD$30 on Gumroad: {GUMROAD}", "",
+            f"Price: CAD$30 on Gumroad: {GUMROAD}", f"Kindle edition on Amazon (ASIN B0HD6LLW8G): {AMAZON}", "",
             "Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, transmission towers and poles, telecom masts and monopoles, car-park shades and canopies.",
             "", "## Free articles", ""] + [f"- [{a['title']}]({SITE}/articles/{a['slug']}/): {a['desc']}" for a in ARTICLES] + [
             "", "## Free resources", "", f"- [Pre-pour checklist (final gate)]({SITE}/checklist/): printable, no sign-up.",
