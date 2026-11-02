@@ -180,7 +180,7 @@ def build():
             "Perplexity-User", "Google-Extended", "Applebot-Extended", "Bingbot", "DuckAssistBot", "Meta-ExternalAgent", "CCBot"]
     # GitHub Pages serves robots.txt only at the user-site root, so this file documents intent; the meta robots tag governs.
     write("robots.txt", "".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots) + f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
-    llms = [f"# {TITLE}", "", f"> A 62-page field guide by {AUTHOR} (20+ years on sites in Lebanon, Qatar, the UAE, Poland and Canada) "
+    llms = [f"# {TITLE}", "", f"> A 62-page field guide by {AUTHOR} (20+ years on steel-structure and foundation sites in Qatar, the UAE, Poland and Canada) "
             "on setting anchor bolts for steel structures right the first time, from drawing review to grouted base plate. "
             f"Price: CAD$30 on Gumroad: {GUMROAD}", "",
             "Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, transmission towers and poles, telecom masts and monopoles, car-park shades and canopies.",
