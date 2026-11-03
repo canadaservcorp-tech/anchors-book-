@@ -27,6 +27,7 @@ Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, 
 ## Free resources
 
 - [Pre-pour checklist (final gate)](https://canadaservcorp-tech.github.io/anchors-book-/checklist/): printable, no sign-up.
+- [About the author](https://canadaservcorp-tech.github.io/anchors-book-/about/): Hicham Zein Eddine's site experience, topics, and workshops on anchor bolts, foundations and steel erection.
 
 ## Book contents
 
