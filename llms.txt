@@ -24,6 +24,11 @@ Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, 
 - [Steel structure foundation sequence: from drawing to grouted base plate](https://canadaservcorp-tech.github.io/anchors-book-/articles/steel-structure-foundation-sequence/): The site sequence for PEB, warehouse, tower and canopy foundations in 15 steps: drawings, survey, access, excavation, blinding, formwork, rebar, anchor bolts, base plate, grout, QA/QC and fixes.
 - [Anchor bolts for poles, towers and canopies under uplift](https://canadaservcorp-tech.github.io/anchors-book-/articles/pole-tower-anchor-bolts-uplift/): Telecom masts, transmission towers, lighting poles and open canopies put anchor bolts in tension. What changes on site: embedment, hook orientation, grout and tolerances.
 
+## Live workshop
+
+- Anchor Bolts & Steel-Structure Foundations: Get It Right Before the Pour. Live on Zoom, Thursday December 3, 2026, 8:00-11:00 Montréal time, taught by Hicham Zein Eddine in English (French and Arabic for private sessions). Book on Eventbrite (CA$129 + tax): https://www.eventbrite.ca/e/2004284399593 or Maven (US$200): https://maven.com/hicham-zein-eddine/anchor-bolts-workshop
+- Private company or school workshops (3 hours, full day, 3 days): https://canadacorp.gumroad.com/l/anchor-bolt-workshop
+
 ## Free resources
 
 - [Pre-pour checklist (final gate)](https://canadaservcorp-tech.github.io/anchors-book-/checklist/): printable, no sign-up.
