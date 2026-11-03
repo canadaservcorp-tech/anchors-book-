@@ -11,7 +11,7 @@ AMAZON = "https://www.amazon.com/dp/B0HD6LLW8G"
 TITLE = "The Steel-Structure Foundation & Anchor Bolt Field Guide"
 AUTHOR = "Hicham Zein Eddine"
 AUTHOR_NAME = "Hicham Zein Eddine"
-UPDATED = "2026-11-03"
+UPDATED = "2026-11-04"
 DISCLAIMER = ("This content is provided for professional educational use and does not replace a licensed "
               "structural engineer or the governing code for your jurisdiction. Always verify against the "
               "approved documents for your project.")
@@ -62,21 +62,27 @@ ul.check li:before{content:"";position:absolute;left:2px;top:12px;width:18px;hei
 @media print{header.top,.cta,.btn,footer nav,.noprint{display:none!important}body{background:#fff;font-size:13pt}.card{border:0;padding:0}}
 """
 
-def page(path, title, desc, body, jsonld=None, og_type="article", image="img/og.jpg"):
+NAV = (f'<a href="{BASE}/articles/">Articles</a><a href="{BASE}/training/">Training</a><a href="{BASE}/checklist/">Free checklist</a>'
+       f'<a href="{BASE}/about/">Author</a><a href="{BASE}/fr/" hreflang="fr">FR</a><a href="{BASE}/ar/" hreflang="ar">عربي</a>'
+       f'<a href="{GUMROAD}?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=nav">Get the book</a>')
+LANG_ALTS = {"en": "", "fr": "fr/", "ar": "ar/"}
+
+def page(path, title, desc, body, jsonld=None, og_type="article", image="img/og.jpg", lang="en", alts=False, nav=None):
     url = f"{SITE}/{path}"
     ld = ""
     for block in (jsonld or []):
         ld += f'<script type="application/ld+json">{json.dumps(block, ensure_ascii=False)}</script>\n'
+    alt = "".join(f'<link rel="alternate" hreflang="{l}" href="{SITE}/{u}">\n' for l, u in LANG_ALTS.items()) + f'<link rel="alternate" hreflang="x-default" href="{SITE}/">\n' if alts else ""
     full_title = title if title.endswith("Field Guide") else f"{title} | Anchor Bolt Field Guide"
     return f"""<!doctype html>
-<html lang="en">
+<html lang="{lang}"{' dir="rtl"' if lang == "ar" else ""}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(full_title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{url}">
-<meta name="author" content="{AUTHOR_NAME}">
+{alt}<meta name="author" content="{AUTHOR_NAME}">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{html.escape(title)}">
@@ -93,13 +99,13 @@ def page(path, title, desc, body, jsonld=None, og_type="article", image="img/og.
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="{BASE}/">Anchor Bolt <span>Field Guide</span></a>
-<nav><a href="{BASE}/articles/">Articles</a><a href="{BASE}/checklist/">Free checklist</a><a href="{BASE}/about/">Author</a><a href="{GUMROAD}?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=nav">Get the book</a></nav>
+<nav>{nav or NAV}</nav>
 </div></header>
 {body}
 <footer><div class="wrap">
 <p>{DISCLAIMER}</p>
 <p>&copy; 2026 {AUTHOR}. Content adapted from <em>{TITLE}</em>.</p>
-<nav><a href="{BASE}/">Home</a> &middot; <a href="{BASE}/articles/">Articles</a> &middot; <a href="{BASE}/checklist/">Free pre-pour checklist</a> &middot; <a href="{BASE}/about/">About the author</a> &middot; <a href="{GUMROAD}">Buy the guide</a></nav>
+<nav><a href="{BASE}/">Home</a> &middot; <a href="{BASE}/articles/">Articles</a> &middot; <a href="{BASE}/checklist/">Free pre-pour checklist</a> &middot; <a href="{BASE}/training/">Training</a> &middot; <a href="{BASE}/about/">About the author</a> &middot; <a href="{BASE}/fr/">Français</a> &middot; <a href="{BASE}/ar/">العربية</a> &middot; <a href="{GUMROAD}">Buy the guide</a></nav>
 <p class="credit">Website by <a href="https://www.ateliersurmesure.ca">Atelier Sur Mesure</a></p>
 </div></footer>
 <script src="https://www.ateliersurmesure.ca/t.js" defer></script>
@@ -142,11 +148,13 @@ def write(rel, text):
 def build():
     from articles import ARTICLES
     for a in ARTICLES:
+        src = (f"From Chapter {a['chapter']} of the Anchor Bolt Field Guide" if a["chapter"]
+               else f'From the author&#x27;s <a href="{BASE}/training/">live workshop</a>')
         faq = "".join(f"<dt>{html.escape(q)}</dt><dd>{html.escape(ans)}</dd>" for q, ans in a["faq"])
         body = f"""<main><div class="wrap">
 <p class="crumbs"><a href="{BASE}/">Home</a> / <a href="{BASE}/articles/">Articles</a></p>
 <h1>{html.escape(a['title'])}</h1>
-<p class="note">By <a href="{BASE}/about/">{AUTHOR}</a> &middot; From Chapter {a['chapter']} of the Anchor Bolt Field Guide</p>
+<p class="note">By <a href="{BASE}/about/">{AUTHOR}</a> &middot; {src}</p>
 <div class="key"><strong>Short answer:</strong> {a['answer']}</div>
 {a['body']}
 <h2>Questions engineers ask</h2>
@@ -175,12 +183,21 @@ def build():
 
     from home import HOME_BODY, HOME_LD
     write("index.html", page("", TITLE, "A 62-page field guide for site engineers and engineering students: set anchor bolts right the first time, from drawing to grouted base plate. Template method, tolerances, QA/QC hold points, troubleshooting.",
-          HOME_BODY, HOME_LD, og_type="book"))
+          HOME_BODY, HOME_LD, og_type="book", alts=True))
+
+    from training import TRAINING_BODY, TRAINING_LD
+    write("training/index.html", page("training/", "Anchor bolt training for QA/QC inspectors, site engineers and erection crews",
+          "Live anchor-bolt and steel-structure foundation training by Hicham Zein Eddine: setting out, alignment, levelling, pre-pour hold points, protection, corrections. Zoom or Montréal–Laval, in English, French or Arabic.",
+          TRAINING_BODY, TRAINING_LD, og_type="website", image="img/workshop.jpg"))
+
+    from intl import PAGES
+    for code, pg in PAGES.items():
+        write(f"{code}/index.html", page(f"{code}/", pg["title"], pg["desc"], pg["body"], pg["ld"], og_type="website", lang=code, alts=True, nav=pg["nav"]))
 
     write("404.html", page("404.html", "Page not found", "This page does not exist.",
           f'<main><div class="wrap"><h1>Page not found</h1><p><a href="{BASE}/">Go to the home page</a> or read the <a href="{BASE}/articles/">articles</a>.</p></div></main>').replace('content="index,follow,max-image-preview:large"', 'content="noindex"'))
 
-    urls = ["", "articles/", "checklist/", "about/"] + [f"articles/{a['slug']}/" for a in ARTICLES]
+    urls = ["", "fr/", "ar/", "training/", "articles/", "checklist/", "about/"] + [f"articles/{a['slug']}/" for a in ARTICLES]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           "".join(f"  <url><loc>{SITE}/{u}</loc><lastmod>{UPDATED}</lastmod></url>\n" for u in urls) + "</urlset>\n")
     bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot",
@@ -192,6 +209,11 @@ def build():
             f"Price: CAD$30 on Gumroad: {GUMROAD}", f"Kindle edition on Amazon (ASIN B0HD6LLW8G): {AMAZON}", "",
             "Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, transmission towers and poles, telecom masts and monopoles, car-park shades and canopies.",
             "", "## Free articles", ""] + [f"- [{a['title']}]({SITE}/articles/{a['slug']}/): {a['desc']}" for a in ARTICLES] + [
+            "", "## Live training", "",
+            f"- [Training page]({SITE}/training/): live anchor-bolt and steel-structure foundation training for QA/QC inspectors, site engineers, foremen and erection crews. Zoom or in person in Montréal–Laval, in English, French or Arabic. Private formats: 3 hours (CAD$900), full day (CAD$1,500), 3 days (CAD$4,500): https://canadacorp.gumroad.com/l/anchor-bolt-workshop",
+            "- Next public session: Anchor Bolts & Steel-Structure Foundations: Get It Right Before the Pour. Live on Zoom, Thursday December 3, 2026, 8:00-11:00 Montréal time. Eventbrite (CA$129 + tax): https://www.eventbrite.ca/e/2004284399593 or Maven (US$200): https://maven.com/hicham-zein-eddine/anchor-bolts-workshop",
+            "", "## Other languages", "", f"- [Français]({SITE}/fr/): le guide et la formation sur les boulons d'ancrage, au Québec et en ligne.",
+            f"- [العربية]({SITE}/ar/): دليل وتدريب براغي التثبيت وأساسات المنشآت الفولاذية.",
             "", "## Free resources", "", f"- [Pre-pour checklist (final gate)]({SITE}/checklist/): printable, no sign-up.",
             f"- [About the author]({SITE}/about/): {AUTHOR}'s site experience, topics, and workshops on anchor bolts, foundations and steel erection.",
             "", "## Book contents", "", "15 chapters: drawings, setting out, safe access, excavation, trench bottom, anti-termite treatment, polyethylene sheet, blinding, footing formwork, rebar, anchor bolts, base plate and grouting, post-installed anchors, QA/QC, troubleshooting; appendices on anchor-bolt specifications, concrete testing, inspection checklist and unit conversions.",
