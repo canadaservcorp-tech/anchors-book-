@@ -12,6 +12,7 @@ HOME_BODY = f"""<section class="hero"><div class="wrap">
 <h1>Set anchor bolts right the first time, from drawing to grouted base plate.</h1>
 <p>They taught you how to design a foundation. This guide shows you how to build one: the exact site sequence, the template method, QA/QC hold points and the fixes when something goes wrong.</p>
 {buy("home-hero")}<span class="price">CAD$30 · PDF</span><br>
+<p class="price" style="display:block;margin-top:14px">Live workshop on Zoom, Dec 3, 2026, 8:00 Montréal time: <a href="{BASE}/training/#next-workshop">see details and book a seat</a></p>
 <a class="btn ghost" href="{BASE}/checklist/">Free pre-pour checklist</a></div>
 <img class="cover" src="{BASE}/img/cover.jpg" alt="Cover of {TITLE}" width="260"></div></section>
 <main><div class="wrap">
@@ -30,7 +31,8 @@ HOME_BODY = f"""<section class="hero"><div class="wrap">
 <h2>Look inside</h2>
 <div class="pages">{gallery}</div>
 <h2>About the author</h2>
-<p>{AUTHOR} has more than 20 years of steel-structure and foundation site experience in Qatar, the UAE, Poland and Canada.</p>
+<p>{AUTHOR} has more than 20 years of steel-structure and foundation site experience in Qatar, the UAE, Poland and Canada. He teaches live <a href="{BASE}/training/">anchor-bolt training</a> for companies, colleges and universities, in English, French or Arabic.</p>
+<p>Also available: <a href="{BASE}/fr/" hreflang="fr">en français</a> · <a href="{BASE}/ar/" hreflang="ar">بالعربية</a></p>
 <h2>Free articles</h2>
 <div class="grid">{cards}</div>
 <p><a href="{BASE}/articles/">All articles &rarr;</a></p>

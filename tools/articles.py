@@ -464,4 +464,145 @@ ARTICLES = [
 ],
 "related": ["l-bolt-j-bolt-hook-orientation", "anchor-bolt-embedment-depth", "base-plate-non-shrink-grout"],
 },
+{
+"slug": "anchor-bolt-setting-out-alignment-levelling",
+"title": "Setting out anchor bolts: alignment and levelling on site",
+"desc": "How to set out anchor bolt groups from survey control: offset pegs, template centring, diagonals, top-of-bolt level and projection, and the check right after the pour.",
+"chapter": None, "img": "p-template",
+"answer": "Set out every bolt group from the survey grid, not from the formwork. Fix offset pegs outside the excavation so they survive the works, centre the template on the surveyed column point, check the diagonals between groups, set the top-of-bolt level from the benchmark, then check position and level again immediately after the pour.",
+"body": """
+<p>Most anchor-bolt problems are setting-out problems. A bolt group that is 20 mm off grid was usually set from the wrong reference, not cast badly.</p>
+<h2>Work from survey control, not from the formwork</h2>
+<ul><li>Use the gridlines and benchmarks given by the surveyor, the same ones the steel was detailed to.</li>
+<li>Fix offset pegs or profile boards outside the excavation, so the grid can be re-established after digging, blinding and formwork.</li>
+<li>Never measure a bolt group from the edge of the formwork: formwork moves.</li></ul>
+<h2>Alignment</h2>
+<ul><li>Centre the template on the surveyed column point (the centre nail on the template).</li>
+<li>Check the template is square to the gridlines, not just centred.</li>
+<li>Check the distances and diagonals between neighbouring bolt groups. The steel frame needs the groups right relative to each other.</li></ul>
+<h2>Levelling and projection</h2>
+<ul><li>Set the top-of-bolt level from the benchmark with a level or total station.</li>
+<li>Check the projection above the concrete against the drawing: enough thread for levelling nut, base plate, washer and top nut.</li>
+<li>Use the two nuts on the template to raise or lower each bolt to the exact height.</li></ul>
+<h2>Check again after the pour</h2>
+<p>Recheck position and level immediately after the pour, while small corrections are still possible, then record an as-built survey of every group before the steel is ordered to site. The erector should receive that as-built, not discover the errors with a crane on hook.</p>
+""",
+"faq": [
+("Where do you measure anchor bolt positions from?", "From the survey gridlines and benchmarks, using offset pegs fixed outside the excavation. Not from the formwork."),
+("How do you set the top level of anchor bolts?", "From the benchmark with a level or total station, adjusting each bolt with the nuts above and below the template until the projection matches the drawing."),
+("When should anchor bolts be checked after casting?", "Immediately after the pour, then again with an as-built survey of every bolt group before steel erection."),
+],
+"related": ["anchor-bolt-tolerances", "anchor-bolt-template", "pre-pour-checklist"],
+},
+{
+"slug": "anchor-bolt-protection-until-erection",
+"title": "Protecting anchor bolts until steel erection: caps, marking and site rules",
+"desc": "Cast-in anchor bolts can wait weeks for the steel. How to protect the threads and the bolt group: caps, tape, nuts left on, marking, keeping equipment away, and no welding or bending.",
+"chapter": None, "img": "p-troubleshooting",
+"answer": "After the pour, keep the nuts on, cover the threads with caps or tape, mark each bolt group so it is visible to machines, keep equipment and loads away from it, and never weld to, bend or use anchor bolts as tie points. Check the threads again before the erection crew arrives.",
+"body": """
+<p>Between the pour and the erection crew there can be weeks of excavation, backfill, slab work and traffic. Bolts that were perfect at the pour can be damaged before the first column arrives.</p>
+<h2>Protect the threads</h2>
+<ul><li>Keep the nuts and washers on the bolts.</li>
+<li>Cover the exposed thread with plastic caps, a short pipe sleeve or tape.</li>
+<li>On galvanised bolts, protect the coating too: damaged zinc must be repaired before erection, for example with a zinc-rich repair product as the specification allows.</li></ul>
+<h2>Make the bolts visible</h2>
+<ul><li>Paint or flag each bolt group so excavator, loader and truck drivers can see it.</li>
+<li>Barricade groups that sit in traffic routes or near backfill work.</li>
+<li>Tell every subcontractor where the bolt groups are before they start.</li></ul>
+<h2>Site rules for cast-in bolts</h2>
+<ul><li>No welding to anchor bolts and no heating them.</li>
+<li>No bending them to clear equipment or to "correct" position.</li>
+<li>Do not use them as tie-down or lifting points.</li></ul>
+<h2>Before the erection crew arrives</h2>
+<p>Remove the caps, clean and check every thread by running the nut down by hand, and confirm the as-built survey. Damaged threads are repaired with a thread file, die or chaser; badly damaged bolts go back to the structural engineer.</p>
+""",
+"faq": [
+("How do you protect anchor bolts after the pour?", "Keep the nuts on, cover the threads with caps, sleeves or tape, mark the bolt groups and keep equipment away until steel erection."),
+("Can you weld to anchor bolts?", "No, not unless the structural engineer specifically allows it. Heat can change the steel and damage galvanising."),
+("What is checked before erection?", "Clean threads that take the nut by hand, undamaged coating, and an as-built survey of every bolt group."),
+],
+"related": ["damaged-anchor-bolt-threads", "anchor-bolt-torch-cutting", "misaligned-anchor-bolts"],
+},
+{
+"slug": "anchor-bolt-torch-cutting",
+"title": "Torch-cutting anchor bolts and base plate holes: what is allowed?",
+"desc": "Can you cut anchor bolt projection with a torch, or enlarge base plate holes by flame cutting? The field rules: saw first, engineer approval, heat, galvanising and fire safety.",
+"chapter": None, "img": "p-troubleshooting",
+"answer": "Cut excess anchor bolt projection with a saw or abrasive disc rather than a torch where possible, and only after checking enough thread remains. Enlarging or slotting base plate holes, or cutting bolts off for a repair, is done only with the structural engineer's approval, followed by cleaning, hardened plate washers where required and coating repair.",
+"body": """
+<p>The torch is the fastest tool on site, and that is the problem. A few minutes of flame cutting can turn a small error into a structural repair.</p>
+<h2>Cutting excess projection</h2>
+<ul><li>First confirm the bolt is at the right level: a bolt that looks too long may be correct and the base plate level wrong.</li>
+<li>Leave enough thread for the full nut engagement shown on the drawing.</li>
+<li>Prefer a saw or abrasive disc: less heat into the bolt and the concrete.</li>
+<li>Dress the cut end so the nut starts cleanly, and repair galvanising.</li></ul>
+<h2>Enlarging or slotting base plate holes</h2>
+<p>When bolts are slightly out, the temptation is to flame-cut the plate holes bigger. This changes how the connection works. It needs the structural engineer's approval, a clean finished hole and normally a thick hardened plate washer over the enlarged hole.</p>
+<h2>Never use the torch to</h2>
+<ul><li>Heat and bend a bolt into position.</li>
+<li>Cut a bolt off "to fix later" without an approved repair.</li>
+<li>Burn through a bolt and weld a new piece on.</li></ul>
+<h2>Hot-work safety</h2>
+<p>Hot-work permit, fire watch, protection of formwork, membranes and nearby materials, and the right PPE, every time.</p>
+""",
+"faq": [
+("Can you torch cut anchor bolts?", "Cutting excess projection is better done with a saw or abrasive disc. Any cut that shortens bolts below the required thread, or cuts them off for a repair, needs the structural engineer's approval."),
+("Can base plate holes be enlarged on site?", "Only with the structural engineer's approval, normally with a thick hardened plate washer over the enlarged or slotted hole."),
+("Can you heat anchor bolts to bend them?", "No. Heating and bending reduces their capacity. Misaligned bolts are corrected by an approved repair."),
+],
+"related": ["misaligned-anchor-bolts", "anchor-bolt-washers-plate-washers", "anchor-bolt-protection-until-erection"],
+},
+{
+"slug": "anchor-bolt-washers-plate-washers",
+"title": "Washers on anchor bolts: plate washers, hardened washers and spring washers",
+"desc": "Which washers go on anchor bolts under a column base plate: thick plate washers over oversized holes, hardened washers where specified, and why spring washers are used only when the drawings call for them.",
+"chapter": None, "img": "p-hooks",
+"answer": "Base plate holes for anchor bolts are oversized, so a standard washer is not enough: the drawings normally call for a thick plate washer over each hole, sometimes welded to the base plate. Hardened washers are used where specified. Spring or lock washers are not a standard anchor-bolt detail; use them only if the drawings specify them.",
+"body": """
+<p>Washers are small, cheap and often forgotten until the inspector asks for them. On anchor bolts they matter more than on ordinary bolts, because the holes in the base plate are deliberately oversized.</p>
+<h2>Plate washers over oversized holes</h2>
+<ul><li>Base plate holes are larger than the bolt, so a normal washer can sit partly over the hole.</li>
+<li>The usual detail is a thick plate washer with a hole just larger than the bolt.</li>
+<li>Where the bolts carry shear, the drawings may require the plate washer to be welded to the base plate. Follow the detail exactly.</li></ul>
+<h2>Hardened washers</h2>
+<p>Hardened washers (such as ASTM F436) are used where the specification calls for them, for example under a turned element or with high-strength bolts. Check the material list, not the stock in the container.</p>
+<h2>Spring and lock washers</h2>
+<p>Spring washers are not part of a standard anchor-bolt detail. Where vibration or loosening is a concern, such as on poles and towers, the design normally uses a double nut or a specified tightening method. Use spring washers only if the drawings say so.</p>
+<h2>During casting</h2>
+<p>Two nuts and two washers per bolt hold the template: one set below, one above. These are setting washers, not the final connection hardware.</p>
+""",
+"faq": [
+("What washer goes on an anchor bolt over a base plate?", "Normally a thick plate washer, because the base plate holes are oversized. The size and thickness come from the drawings."),
+("Are spring washers used on anchor bolts?", "Not as a standard detail. Use them only if the drawings specify them; vibration is usually handled with double nuts or a specified tightening method."),
+("Why are plate washers sometimes welded to the base plate?", "So the bolts can take shear through the washer when the holes are oversized. Only when the drawings require it."),
+],
+"related": ["base-plate-levelling-nuts-shims", "anchor-bolt-torch-cutting", "astm-f1554-grades"],
+},
+{
+"slug": "anchor-bolt-failures-common-causes",
+"title": "Why anchor bolts fail on site: 9 common causes and how to prevent them",
+"desc": "The site causes behind misplaced, damaged and failed anchor bolts: wrong drawing revision, no template, poor setting out, movement during the pour, damaged threads, wrong grade or diameter, and unapproved fixes.",
+"chapter": None, "img": "p-qaqc",
+"answer": "Most anchor-bolt failures on site come from nine causes: wrong drawing revision, no template, setting out from formwork, bolts not fixed rigidly, concrete pumped at the bolts, wrong grade or diameter, unprotected threads, damage before erection and unapproved fixes such as bending or heating. Each one is stopped by a hold point before the pour.",
+"body": """
+<table><tr><th>Cause</th><th>Prevention</th></tr>
+<tr><td>1. Wrong drawing revision</td><td>Check the bolt plan against the latest issued-for-construction drawings and the steel shop drawings.</td></tr>
+<tr><td>2. No template</td><td>One template per bolt pattern, drilled to the base plate detail.</td></tr>
+<tr><td>3. Setting out from the formwork</td><td>Set out from survey control with offset pegs.</td></tr>
+<tr><td>4. Bolts tied but not fixed</td><td>Tie, check level and alignment, then fix rigidly as specified.</td></tr>
+<tr><td>5. Concrete aimed at the bolts</td><td>Direct the pump onto the reinforcement; vibrate away from the assembly.</td></tr>
+<tr><td>6. Wrong grade or diameter</td><td>Measure every bolt with a caliper and check the grade marking.</td></tr>
+<tr><td>7. Concrete on the threads</td><td>Tape or cap the threads before the pour.</td></tr>
+<tr><td>8. Damage before erection</td><td>Caps, marking and keeping equipment away.</td></tr>
+<tr><td>9. Unapproved fixes</td><td>No bending, heating or cutting without the structural engineer.</td></tr></table>
+<p>None of these needs advanced calculation. They need someone with the authority to stop the pour until every check is signed.</p>
+""",
+"faq": [
+("What is the most common cause of misplaced anchor bolts?", "Setting out from the wrong reference or without a rigid template, so the bolt group moves before or during the pour."),
+("How do you prevent anchor bolt problems?", "With hold points before the pour: drawing check, survey, template, fixing, thread protection and sign-off."),
+("Who decides the repair when anchor bolts fail?", "The structural engineer."),
+],
+"related": ["pre-pour-checklist", "misaligned-anchor-bolts", "anchor-bolt-setting-out-alignment-levelling"],
+},
 ]

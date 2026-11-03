@@ -23,11 +23,21 @@ Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, 
 - [Post-installed anchors: chemical vs mechanical vs undercut](https://canadaservcorp-tech.github.io/anchors-book-/articles/post-installed-anchors-chemical-vs-mechanical/): When you need drilled-in anchors instead of cast-in bolts, how chemical, expansion and undercut anchors work, the standards behind them, and the installation rules that prevent failures.
 - [Steel structure foundation sequence: from drawing to grouted base plate](https://canadaservcorp-tech.github.io/anchors-book-/articles/steel-structure-foundation-sequence/): The site sequence for PEB, warehouse, tower and canopy foundations in 15 steps: drawings, survey, access, excavation, blinding, formwork, rebar, anchor bolts, base plate, grout, QA/QC and fixes.
 - [Anchor bolts for poles, towers and canopies under uplift](https://canadaservcorp-tech.github.io/anchors-book-/articles/pole-tower-anchor-bolts-uplift/): Telecom masts, transmission towers, lighting poles and open canopies put anchor bolts in tension. What changes on site: embedment, hook orientation, grout and tolerances.
+- [Setting out anchor bolts: alignment and levelling on site](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-setting-out-alignment-levelling/): How to set out anchor bolt groups from survey control: offset pegs, template centring, diagonals, top-of-bolt level and projection, and the check right after the pour.
+- [Protecting anchor bolts until steel erection: caps, marking and site rules](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-protection-until-erection/): Cast-in anchor bolts can wait weeks for the steel. How to protect the threads and the bolt group: caps, tape, nuts left on, marking, keeping equipment away, and no welding or bending.
+- [Torch-cutting anchor bolts and base plate holes: what is allowed?](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-torch-cutting/): Can you cut anchor bolt projection with a torch, or enlarge base plate holes by flame cutting? The field rules: saw first, engineer approval, heat, galvanising and fire safety.
+- [Washers on anchor bolts: plate washers, hardened washers and spring washers](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-washers-plate-washers/): Which washers go on anchor bolts under a column base plate: thick plate washers over oversized holes, hardened washers where specified, and why spring washers are used only when the drawings call for them.
+- [Why anchor bolts fail on site: 9 common causes and how to prevent them](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-failures-common-causes/): The site causes behind misplaced, damaged and failed anchor bolts: wrong drawing revision, no template, poor setting out, movement during the pour, damaged threads, wrong grade or diameter, and unapproved fixes.
 
-## Live workshop
+## Live training
 
-- Anchor Bolts & Steel-Structure Foundations: Get It Right Before the Pour. Live on Zoom, Thursday December 3, 2026, 8:00-11:00 Montréal time, taught by Hicham Zein Eddine in English (French and Arabic for private sessions). Book on Eventbrite (CA$129 + tax): https://www.eventbrite.ca/e/2004284399593 or Maven (US$200): https://maven.com/hicham-zein-eddine/anchor-bolts-workshop
-- Private company or school workshops (3 hours, full day, 3 days): https://canadacorp.gumroad.com/l/anchor-bolt-workshop
+- [Training page](https://canadaservcorp-tech.github.io/anchors-book-/training/): live anchor-bolt and steel-structure foundation training for QA/QC inspectors, site engineers, foremen and erection crews. Zoom or in person in Montréal–Laval, in English, French or Arabic. Private formats: 3 hours (CAD$900), full day (CAD$1,500), 3 days (CAD$4,500): https://canadacorp.gumroad.com/l/anchor-bolt-workshop
+- Next public session: Anchor Bolts & Steel-Structure Foundations: Get It Right Before the Pour. Live on Zoom, Thursday December 3, 2026, 8:00-11:00 Montréal time. Eventbrite (CA$129 + tax): https://www.eventbrite.ca/e/2004284399593 or Maven (US$200): https://maven.com/hicham-zein-eddine/anchor-bolts-workshop
+
+## Other languages
+
+- [Français](https://canadaservcorp-tech.github.io/anchors-book-/fr/): le guide et la formation sur les boulons d'ancrage, au Québec et en ligne.
+- [العربية](https://canadaservcorp-tech.github.io/anchors-book-/ar/): دليل وتدريب براغي التثبيت وأساسات المنشآت الفولاذية.
 
 ## Free resources
 
