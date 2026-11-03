@@ -11,7 +11,7 @@ AMAZON = "https://www.amazon.com/dp/B0HD6LLW8G"
 TITLE = "The Steel-Structure Foundation & Anchor Bolt Field Guide"
 AUTHOR = "Hicham Zein Eddine"
 AUTHOR_NAME = "Hicham Zein Eddine"
-UPDATED = "2026-10-19"
+UPDATED = "2026-11-03"
 DISCLAIMER = ("This content is provided for professional educational use and does not replace a licensed "
               "structural engineer or the governing code for your jurisdiction. Always verify against the "
               "approved documents for your project.")
@@ -58,7 +58,7 @@ figure{margin:18px 0}figure img{border:1px solid var(--line);border-radius:8px;b
 footer{color:var(--muted);font-size:14px;padding:30px 0 40px;border-top:1px solid var(--line);margin-top:30px}
 ul.check{list-style:none;padding:0}ul.check li{padding:9px 0 9px 34px;border-bottom:1px solid var(--line);position:relative}
 ul.check li:before{content:"";position:absolute;left:2px;top:12px;width:18px;height:18px;border:2px solid var(--navy);border-radius:3px}
-@media(max-width:720px){.hero .wrap{grid-template-columns:1fr}.hero .cover{max-width:220px}.hero h1{font-size:27px}.cta{grid-template-columns:1fr}.cta img{max-width:110px}nav a{margin:0 14px 0 0}}
+@media(max-width:720px){.hero .wrap{grid-template-columns:1fr}.hero .cover{max-width:220px}.hero h1{font-size:27px}.cta{grid-template-columns:1fr}.cta img{max-width:110px}nav a{margin:0 14px 0 0}header nav a{margin:0 12px 0 0;white-space:nowrap;font-size:14px}}
 @media print{header.top,.cta,.btn,footer nav,.noprint{display:none!important}body{background:#fff;font-size:13pt}.card{border:0;padding:0}}
 """
 
@@ -93,13 +93,13 @@ def page(path, title, desc, body, jsonld=None, og_type="article", image="img/og.
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="{BASE}/">Anchor Bolt <span>Field Guide</span></a>
-<nav><a href="{BASE}/articles/">Articles</a><a href="{BASE}/checklist/">Free checklist</a><a href="{GUMROAD}?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=nav">Get the book</a></nav>
+<nav><a href="{BASE}/articles/">Articles</a><a href="{BASE}/checklist/">Free checklist</a><a href="{BASE}/about/">Author</a><a href="{GUMROAD}?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=nav">Get the book</a></nav>
 </div></header>
 {body}
 <footer><div class="wrap">
 <p>{DISCLAIMER}</p>
 <p>&copy; 2026 {AUTHOR}. Content adapted from <em>{TITLE}</em>.</p>
-<nav><a href="{BASE}/">Home</a> &middot; <a href="{BASE}/articles/">Articles</a> &middot; <a href="{BASE}/checklist/">Free pre-pour checklist</a> &middot; <a href="{GUMROAD}">Buy the guide</a></nav>
+<nav><a href="{BASE}/">Home</a> &middot; <a href="{BASE}/articles/">Articles</a> &middot; <a href="{BASE}/checklist/">Free pre-pour checklist</a> &middot; <a href="{BASE}/about/">About the author</a> &middot; <a href="{GUMROAD}">Buy the guide</a></nav>
 <p class="credit">Website by <a href="https://www.ateliersurmesure.ca">Atelier Sur Mesure</a></p>
 </div></footer>
 <script src="https://www.ateliersurmesure.ca/t.js" defer></script>
@@ -113,7 +113,7 @@ def cta(campaign):
 <p>62 pages, the full site sequence from drawing to grouted base plate: survey, excavation, blinding, rebar, the anchor-bolt template, QA/QC hold points and field fixes. Written by Hicham Zein Eddine, from 20+ years on steel-structure and foundation sites in Qatar, the UAE, Poland and Canada.</p>
 {buy(campaign)}</div></div>"""
 
-AUTHOR_LD = {"@type": "Person", "name": AUTHOR_NAME,
+AUTHOR_LD = {"@type": "Person", "name": AUTHOR_NAME, "url": f"{SITE}/about/",
              "description": "20+ years of steel-structure and foundation site experience (Qatar, UAE, Poland, Canada)."}
 
 def article_ld(a):
@@ -146,7 +146,7 @@ def build():
         body = f"""<main><div class="wrap">
 <p class="crumbs"><a href="{BASE}/">Home</a> / <a href="{BASE}/articles/">Articles</a></p>
 <h1>{html.escape(a['title'])}</h1>
-<p class="note">By {AUTHOR} &middot; From Chapter {a['chapter']} of the Anchor Bolt Field Guide</p>
+<p class="note">By <a href="{BASE}/about/">{AUTHOR}</a> &middot; From Chapter {a['chapter']} of the Anchor Bolt Field Guide</p>
 <div class="key"><strong>Short answer:</strong> {a['answer']}</div>
 {a['body']}
 <h2>Questions engineers ask</h2>
@@ -168,6 +168,11 @@ def build():
           "Free printable pre-concrete cast-in checklist (final gate) for steel-structure foundations: drawings, survey, formwork, rebar, anchor bolts, template, cleanliness, threads, access, lighting, vibrator and sign-off.",
           CHECKLIST_BODY, CHECKLIST_LD))
 
+    from about import ABOUT_BODY, ABOUT_LD
+    write("about/index.html", page("about/", f"About the author: {AUTHOR_NAME}",
+          f"{AUTHOR_NAME}: 20+ years on steel-structure and foundation sites in Qatar, the UAE, Poland and Canada. Author of the Anchor Bolt Field Guide; workshops on anchor bolts and steel erection.",
+          ABOUT_BODY, ABOUT_LD, og_type="profile"))
+
     from home import HOME_BODY, HOME_LD
     write("index.html", page("", TITLE, "A 62-page field guide for site engineers and engineering students: set anchor bolts right the first time, from drawing to grouted base plate. Template method, tolerances, QA/QC hold points, troubleshooting.",
           HOME_BODY, HOME_LD, og_type="book"))
@@ -175,7 +180,7 @@ def build():
     write("404.html", page("404.html", "Page not found", "This page does not exist.",
           f'<main><div class="wrap"><h1>Page not found</h1><p><a href="{BASE}/">Go to the home page</a> or read the <a href="{BASE}/articles/">articles</a>.</p></div></main>').replace('content="index,follow,max-image-preview:large"', 'content="noindex"'))
 
-    urls = ["", "articles/", "checklist/"] + [f"articles/{a['slug']}/" for a in ARTICLES]
+    urls = ["", "articles/", "checklist/", "about/"] + [f"articles/{a['slug']}/" for a in ARTICLES]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           "".join(f"  <url><loc>{SITE}/{u}</loc><lastmod>{UPDATED}</lastmod></url>\n" for u in urls) + "</urlset>\n")
     bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot",
@@ -188,6 +193,7 @@ def build():
             "Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, transmission towers and poles, telecom masts and monopoles, car-park shades and canopies.",
             "", "## Free articles", ""] + [f"- [{a['title']}]({SITE}/articles/{a['slug']}/): {a['desc']}" for a in ARTICLES] + [
             "", "## Free resources", "", f"- [Pre-pour checklist (final gate)]({SITE}/checklist/): printable, no sign-up.",
+            f"- [About the author]({SITE}/about/): {AUTHOR}'s site experience, topics, and workshops on anchor bolts, foundations and steel erection.",
             "", "## Book contents", "", "15 chapters: drawings, setting out, safe access, excavation, trench bottom, anti-termite treatment, polyethylene sheet, blinding, footing formwork, rebar, anchor bolts, base plate and grouting, post-installed anchors, QA/QC, troubleshooting; appendices on anchor-bolt specifications, concrete testing, inspection checklist and unit conversions.",
             "", "## Note", "", DISCLAIMER, ""]
     write("llms.txt", "\n".join(llms))
