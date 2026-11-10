@@ -5,7 +5,27 @@ Kindle edition on Amazon (ASIN B0HD6LLW8G): https://www.amazon.com/dp/B0HD6LLW8G
 
 Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, transmission towers and poles, telecom masts and monopoles, car-park shades and canopies.
 
-## Free articles
+Audience: site engineers, QA/QC engineers and inspectors, structural engineers, and civil engineering students worldwide (North America, Europe, the Gulf/Middle East, Africa, Asia). Standards covered: ACI 318, Eurocodes (EN 1992, EN 1993), AISC, ASTM, ISO, BS EN.
+
+## For QA/QC engineers and inspectors
+
+- [QA/QC hold points for steel-structure foundations and anchor bolts (10-stage plan)](https://canadaservcorp-tech.github.io/anchors-book-/articles/qa-qc-hold-points-steel-structure-foundations/): For QA/QC engineers and inspectors: the 10 mandatory hold points from survey to 28-day cubes, who signs each one, and the record that proves it.
+- [Pre-pour checklist for anchor bolts and foundations (final gate)](https://canadaservcorp-tech.github.io/anchors-book-/articles/pre-pour-checklist/): The final gate before casting a steel-structure foundation: bolts, formwork, rebar, spacers, cleaning, threads, access, lighting, vibrator and the inspector's signature.
+- [Concrete testing for foundations: slump, temperature and 7/28-day cubes](https://canadaservcorp-tech.github.io/anchors-book-/articles/concrete-testing-foundations-slump-cubes/): What the QA/QC engineer checks when concrete arrives and after curing: slump, temperature, cube sampling, 7-day and 28-day results, and what to do with a low result.
+- [Anchor bolt setting tolerances: what is acceptable?](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-tolerances/): Typical anchor bolt tolerances for bolt group position, spacing, projection and top elevation, based on AISC and ACI 117 practice, and what to do when bolts fall outside them.
+- [Why anchor bolts fail on site: 9 common causes and how to prevent them](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-failures-common-causes/): The site causes behind misplaced, damaged and failed anchor bolts: wrong drawing revision, no template, poor setting out, movement during the pour, damaged threads, wrong grade or diameter, and unapproved fixes.
+- [Anchor bolt and foundation interview questions for site and QA/QC engineers (with answers)](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-interview-questions-qa-qc/): 15 questions asked in site engineer and QA/QC engineer interviews on anchor bolts, templates, grades, hold points, concrete tests and field fixes, with short field answers.
+
+## For engineering students and new graduates
+
+- [Anchor bolts explained for civil engineering students](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolts-for-civil-engineering-students/): What anchor bolts do, the grades, the template method, the site sequence and the mistakes new engineers make, in one page for civil and structural engineering students.
+- [Your first site as a new engineer: earning the crew's respect](https://canadaservcorp-tech.github.io/anchors-book-/articles/first-day-on-site-new-engineer/): For engineering students and new graduates: how to work with tradesmen who have more years on site, avoid approval traps, and protect your word.
+- [Steel structure foundation sequence: from drawing to grouted base plate](https://canadaservcorp-tech.github.io/anchors-book-/articles/steel-structure-foundation-sequence/): The site sequence for PEB, warehouse, tower and canopy foundations in 15 steps: drawings, survey, access, excavation, blinding, formwork, rebar, anchor bolts, base plate, grout, QA/QC and fixes.
+- [Anchor bolt and foundation standards worldwide: ACI, Eurocode, AISC, ASTM, ISO, BS EN](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-foundation-standards-codes/): Which standard covers what on a steel-structure foundation, from concrete design and base plates to bolt grades, galvanising, grout and concrete testing, for projects in North America, Europe, the Gulf and beyond.
+- [ASTM F1554 Grade 36 vs 55 vs 105: which anchor bolt grade?](https://canadaservcorp-tech.github.io/anchors-book-/articles/astm-f1554-grades/): The three ASTM F1554 anchor bolt grades, their yield strengths and typical uses, how they relate to ISO 8.8 and 10.9, and why you must measure the diameter yourself.
+- [Anchor bolt and foundation interview questions for site and QA/QC engineers (with answers)](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-interview-questions-qa-qc/): 15 questions asked in site engineer and QA/QC engineer interviews on anchor bolts, templates, grades, hold points, concrete tests and field fixes, with short field answers.
+
+## All free articles
 
 - [How to make and use an anchor bolt template](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-template/): Why every anchor bolt group needs a template, how to fabricate it to match the column base plate, and why you should keep it to drill the base plates.
 - [ASTM F1554 Grade 36 vs 55 vs 105: which anchor bolt grade?](https://canadaservcorp-tech.github.io/anchors-book-/articles/astm-f1554-grades/): The three ASTM F1554 anchor bolt grades, their yield strengths and typical uses, how they relate to ISO 8.8 and 10.9, and why you must measure the diameter yourself.
@@ -28,6 +48,11 @@ Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, 
 - [Torch-cutting anchor bolts and base plate holes: what is allowed?](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-torch-cutting/): Can you cut anchor bolt projection with a torch, or enlarge base plate holes by flame cutting? The field rules: saw first, engineer approval, heat, galvanising and fire safety.
 - [Washers on anchor bolts: plate washers, hardened washers and spring washers](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-washers-plate-washers/): Which washers go on anchor bolts under a column base plate: thick plate washers over oversized holes, hardened washers where specified, and why spring washers are used only when the drawings call for them.
 - [Why anchor bolts fail on site: 9 common causes and how to prevent them](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-failures-common-causes/): The site causes behind misplaced, damaged and failed anchor bolts: wrong drawing revision, no template, poor setting out, movement during the pour, damaged threads, wrong grade or diameter, and unapproved fixes.
+- [QA/QC hold points for steel-structure foundations and anchor bolts (10-stage plan)](https://canadaservcorp-tech.github.io/anchors-book-/articles/qa-qc-hold-points-steel-structure-foundations/): For QA/QC engineers and inspectors: the 10 mandatory hold points from survey to 28-day cubes, who signs each one, and the record that proves it.
+- [Concrete testing for foundations: slump, temperature and 7/28-day cubes](https://canadaservcorp-tech.github.io/anchors-book-/articles/concrete-testing-foundations-slump-cubes/): What the QA/QC engineer checks when concrete arrives and after curing: slump, temperature, cube sampling, 7-day and 28-day results, and what to do with a low result.
+- [Anchor bolt and foundation standards worldwide: ACI, Eurocode, AISC, ASTM, ISO, BS EN](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-foundation-standards-codes/): Which standard covers what on a steel-structure foundation, from concrete design and base plates to bolt grades, galvanising, grout and concrete testing, for projects in North America, Europe, the Gulf and beyond.
+- [Anchor bolts explained for civil engineering students](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolts-for-civil-engineering-students/): What anchor bolts do, the grades, the template method, the site sequence and the mistakes new engineers make, in one page for civil and structural engineering students.
+- [Anchor bolt and foundation interview questions for site and QA/QC engineers (with answers)](https://canadaservcorp-tech.github.io/anchors-book-/articles/anchor-bolt-interview-questions-qa-qc/): 15 questions asked in site engineer and QA/QC engineer interviews on anchor bolts, templates, grades, hold points, concrete tests and field fixes, with short field answers.
 
 ## Live training
 
@@ -38,6 +63,8 @@ Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, 
 
 - [Français](https://canadaservcorp-tech.github.io/anchors-book-/fr/): le guide et la formation sur les boulons d'ancrage, au Québec et en ligne.
 - [العربية](https://canadaservcorp-tech.github.io/anchors-book-/ar/): دليل وتدريب براغي التثبيت وأساسات المنشآت الفولاذية.
+- [Points d'arrêt AQ/CQ (français)](https://canadaservcorp-tech.github.io/anchors-book-/fr/qa-qc/): les 10 points d'arrêt d'une fondation de charpente d'acier.
+- [نقاط التوقف لضبط الجودة (العربية)](https://canadaservcorp-tech.github.io/anchors-book-/ar/qa-qc/): نقاط التوقف العشر لمهندسي QA/QC.
 
 ## Free resources
 
