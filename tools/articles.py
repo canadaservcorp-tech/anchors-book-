@@ -926,9 +926,88 @@ ARTICLES += [
         ("When should anchor bolts be surveyed?", "After the concrete sets and before the steel erector mobilises, so fixes can be approved in time."),
         ("Who approves a fix for an out-of-tolerance anchor bolt?", "The structural engineer.")],
 "related": ["anchor-bolt-tolerances", "steel-erection-tolerances-plumbness", "misaligned-anchor-bolts"]},
+
+{"slug": "electrical-pole-foundation-anchor-bolts", "chapter": None, "src": "Steel and foundation reference note &middot; anchor-bolt steps from Chapters 1 and 11 of the guide", "img": "p-hooks",
+"title": "Electrical pole and lighting pole foundations: anchor bolts, bolt circle and levelling nuts",
+"desc": "How steel electrical, lighting and traffic poles are founded: drilled concrete pier with an anchor-bolt cage, bolt-circle template, levelling nuts, grout or open base, and the site checks.",
+"answer": "A steel electrical or lighting pole on a base plate usually sits on a drilled reinforced-concrete pier with a cage of anchor bolts set on a circle by a template. Wind tries to overturn the pole, so the bolts work in tension: diameter, grade, embedment, bolt-circle diameter and orientation must match the pole manufacturer's base plate exactly. Wood and concrete poles are instead embedded directly in the ground to a depth the utility standard sets.",
+"body": f"""<h2>Two ways to found a pole</h2>
+<table><tr><th>Type</th><th>Foundation</th></tr>
+<tr><td>Steel pole with base plate (lighting, traffic, distribution, transmission)</td><td>Drilled concrete pier or spread footing with cast-in anchor bolts</td></tr>
+<tr><td>Wood, concrete or embedded steel pole</td><td>Direct embedment in an augered hole, backfilled with compacted soil, crushed stone or concrete, to the depth the utility standard or design sets</td></tr></table>
+<h2>Site checks for an anchor-bolt pole base</h2>
+<ol><li>Pier position and top level from the survey; depth and diameter as designed, inspected before the cage goes in.</li>
+<li>Bolt cage: grade, diameter and length per the pole manufacturer's anchor-bolt drawing.</li>
+<li>Bolt circle: a steel template matching the pole base plate, oriented so the handhole and arm face the right way.</li>
+<li>Projection: enough thread for the levelling nut, washer, plate, top washer and top nut.</li>
+<li>Conduit sleeves for the cables set before the pour.</li>
+<li>Concrete testing as for any foundation: slump and cubes or cylinders.</li></ol>
+<h2>Levelling nuts and the gap under the plate</h2>
+<p>Many poles are set on levelling nuts with an open gap under the base plate. Highway and lighting specifications (for example AASHTO in the USA) limit how far the plate may stand off the concrete, commonly about one bolt diameter, and set how the nuts are tightened. Follow the specification and the pole supplier's instructions; some projects grout the gap, others require it left open with a screen.</p>
+<p>See <a href="{BASE}/articles/pole-tower-anchor-bolts-uplift/">anchor bolts under uplift</a>, <a href="{BASE}/articles/anchor-bolt-template/">templates</a> and <a href="{BASE}/articles/base-plate-levelling-nuts-shims/">levelling nuts</a>.</p>""",
+"faq": [("What foundation does a steel light pole use?", "Usually a drilled reinforced-concrete pier with cast-in anchor bolts on a circle matching the pole base plate."),
+        ("Why do pole anchor bolts need a template?", "The bolt circle, orientation and projection must match the pole base plate exactly; a template holds them during the pour."),
+        ("Are electrical poles always on anchor bolts?", "No. Wood, concrete and some steel poles are embedded directly in the ground to a depth set by the utility standard or design.")],
+"related": ["pole-tower-anchor-bolts-uplift", "billboard-sign-foundation-footing", "anchor-bolt-template"]},
+
+{"slug": "billboard-sign-foundation-footing", "chapter": None, "src": "Steel and foundation reference note &middot; anchor-bolt steps from Chapters 1 and 11 of the guide", "img": "p-template",
+"title": "Billboard and sign foundations: caisson or spread footing, anchor bolts and wind overturning",
+"desc": "Billboard, pylon sign and monument sign footings: why wind overturning governs, drilled caisson vs spread footing, the anchor-bolt cage, and the QA/QC hold points before the pour.",
+"answer": "A billboard or pylon sign is a large sail on one column, so wind overturning governs its foundation. It is usually a deep drilled caisson or a large spread footing with a heavy anchor-bolt cage, or a column embedded directly in the concrete. The anchor-bolt group must match the column base plate exactly and be checked before the pour, because a misplaced cage cannot be moved once the concrete is in.",
+"body": f"""<h2>Why sign foundations are different</h2>
+<p>A building column carries mostly gravity load. A sign column carries a large wind moment: one side of the bolt group is in tension, the other in compression. The bolts, their embedment and the concrete around them decide whether the sign stays up.</p>
+<h2>Common foundation types</h2>
+<ul><li><strong>Drilled caisson (pier):</strong> deep, round, reinforced; common for single-pole billboards.</li><li><strong>Spread footing:</strong> wide and heavy, used where drilling is difficult or soil is shallow over rock.</li><li><strong>Embedded column:</strong> the steel pipe column is set directly into the caisson concrete.</li></ul>
+<h2>Hold points before the pour</h2>
+<table><tr><th>Check</th><th>Against</th></tr>
+<tr><td>Position and orientation of the sign face</td><td>Site plan and permit</td></tr>
+<tr><td>Excavation depth and diameter; soil as per the geotechnical report</td><td>Foundation design</td></tr>
+<tr><td>Rebar cage and cover</td><td>Drawings</td></tr>
+<tr><td>Anchor-bolt grade, diameter, number, circle or pattern, projection</td><td>Column base-plate drawing</td></tr>
+<tr><td>Template fixed and level; cage braced against the pour</td><td>Survey</td></tr>
+<tr><td>Conduit for lighting or digital faces</td><td>Electrical drawing</td></tr></table>
+<p>After the pour: cube or cylinder results before the column and face are erected, and an as-built survey of the bolts. The sign permit drawings, local building code and the structural engineer govern; this list is the field side.</p>""",
+"faq": [("What foundation does a billboard use?", "Usually a deep drilled caisson or a large spread footing with an anchor-bolt cage or an embedded steel column, designed for wind overturning."),
+        ("Why does wind govern billboard foundation design?", "The sign face is a large area on one column, so wind creates a large overturning moment at the base."),
+        ("What should be checked before pouring a sign footing?", "Position, depth, rebar, anchor-bolt grade, pattern and projection against the base plate, template fixing and conduits.")],
+"related": ["led-digital-media-board-footing", "electrical-pole-foundation-anchor-bolts", "pole-tower-anchor-bolts-uplift"]},
+
+{"slug": "led-digital-media-board-footing", "chapter": None, "src": "Steel and foundation reference note &middot; anchor-bolt steps from Chapters 1 and 11 of the guide", "img": "p-troubleshooting",
+"title": "LED digital media board and screen footings: anchor bolts, conduits and tolerances",
+"desc": "Footings for LED digital billboards, media screens and large display boards: anchor-bolt pattern, power and data conduits, levels for the frame, and pre-pour checks.",
+"answer": "An LED media board footing is a sign footing with two extra demands: the steel frame needs tight bolt positions and levels so the screen modules line up, and power and data conduits must be cast in the right place before the pour. Check the anchor-bolt pattern against the frame supplier's base-plate drawing, the conduit locations against the electrical drawing, and the top level against the survey.",
+"body": f"""<h2>What is different from a static sign</h2>
+<ul><li><strong>Weight and wind:</strong> the screen cabinet and its frame are heavy and catch wind like any sign.</li><li><strong>Alignment:</strong> screen modules are assembled on a frame; a twisted or out-of-level base shows up as visible gaps.</li><li><strong>Services:</strong> power feed, data, and often a grounding (earthing) conductor come up through the footing.</li></ul>
+<h2>Pre-pour checklist</h2>
+<ol><li>Base-plate drawing from the frame supplier: number, diameter, grade and pattern of anchor bolts.</li><li>Template made from that drawing, fixed to the formwork and surveyed.</li><li>Bolt projection and top level set with the nuts.</li><li>Conduits and earthing conductor in position, capped, and clear of the bolts.</li><li>Rebar and cover against the drawings.</li><li>Sign-off before the pour, same as any <a href="{BASE}/articles/qa-qc-hold-points-steel-structure-foundations/">hold point</a>.</li></ol>
+<p>Indoor and wall-mounted screens use post-installed anchors in existing concrete instead; see <a href="{BASE}/articles/post-installed-anchors-chemical-vs-mechanical/">chemical vs mechanical anchors</a>.</p>""",
+"faq": [("What is special about an LED screen footing?", "Tight bolt and level tolerances for the frame, plus power, data and earthing conduits cast in before the pour."),
+        ("Who supplies the anchor-bolt pattern for a media board?", "The frame or screen supplier's base-plate drawing, approved by the structural engineer."),
+        ("How are wall-mounted screens anchored?", "With post-installed chemical or mechanical anchors in the existing structure, as designed.")],
+"related": ["billboard-sign-foundation-footing", "electrical-pole-foundation-anchor-bolts", "post-installed-anchors-chemical-vs-mechanical"]},
+
+{"slug": "metal-building-pre-engineered-anchor-bolts", "chapter": None, "src": "Steel and foundation reference note &middot; anchor-bolt steps from Chapters 1 and 11 of the guide", "img": "p-standards",
+"title": "Metal building (pre-engineered building, PEB) foundations and anchor bolts",
+"desc": "Pre-engineered metal building foundations: the manufacturer's anchor-bolt plan and reaction table, portal-frame horizontal thrust, hairpins and tie rods, and the site sequence.",
+"answer": "A pre-engineered metal building (PEB) arrives with the manufacturer's anchor-bolt plan and column reactions; the foundation engineer designs the footings for them. Portal frames push outward at the base, so that horizontal thrust must be taken by the foundation, hairpin bars into the slab or tie rods. On site, build the foundations and set the bolts while the steel is fabricated, and survey every bolt group before the building is delivered.",
+"body": f"""<h2>Documents to have before setting a single bolt</h2>
+<ul><li>Manufacturer's anchor-bolt plan: grid, bolt sizes, projection and patterns for every column, including endwall and wind-bracing columns.</li><li>Column reaction table (vertical, horizontal, uplift) used by the foundation engineer.</li><li>Foundation drawings by the engineer of record, showing how thrust and uplift are resisted.</li></ul>
+<h2>Portal-frame thrust</h2>
+<p>Rigid-frame columns push outward at the base under gravity and wind. Depending on the design, that thrust goes into the footing, into hairpin bars lapped into the slab, or into tie rods between opposite columns. The anchor bolts alone are not the thrust solution unless the design says so.</p>
+<h2>The time advantage</h2>
+<p>Steel for a PEB takes weeks to fabricate. As the guide's Chapter 1 explains, the foundations are built in parallel, so when the frames arrive the bolts must already be cast, cured and surveyed. A wrong pattern found on delivery day stops the crane.</p>
+<h2>Site checks</h2>
+<ol><li>Grid and diagonals set out from the anchor-bolt plan, not just the architectural plan.</li><li>Templates per column type; endwall columns often differ.</li><li>Projection and top-of-concrete level per the plan.</li><li>As-built survey sent to the manufacturer before shipping if the contract requires it.</li></ol>
+<p>Related: <a href="{BASE}/articles/anchor-bolt-survey-before-steel-erection/">survey before erection</a>, <a href="{BASE}/articles/steel-structure-foundation-sequence/">foundation sequence</a>.</p>""",
+"faq": [("Who provides the anchor-bolt plan for a metal building?", "The metal building manufacturer, with column reactions; the foundation engineer designs the footings."),
+        ("How is portal-frame thrust resisted?", "By the footing, hairpin bars into the slab or tie rods between columns, as the foundation design specifies."),
+        ("Why survey PEB anchor bolts before delivery?", "Because the steel is prefabricated to the plan; a wrong bolt pattern stops erection.")],
+"related": ["steel-structure-foundation-sequence", "anchor-bolt-survey-before-steel-erection", "steel-erection-tolerances-plumbness"]},
 ]
 
 AUDIENCES = [
+    ("Poles, billboards, media boards and metal buildings", ["electrical-pole-foundation-anchor-bolts", "billboard-sign-foundation-footing", "led-digital-media-board-footing",
+     "metal-building-pre-engineered-anchor-bolts", "pole-tower-anchor-bolts-uplift", "post-installed-anchors-chemical-vs-mechanical"]),
     ("For steel structure and welding inspectors", ["steel-structure-inspection-checklist", "anchor-bolt-survey-before-steel-erection", "steel-material-receiving-mill-certificates",
      "high-strength-bolt-tightening-inspection", "structural-welding-visual-inspection", "steel-erection-tolerances-plumbness", "steel-coating-galvanizing-inspection", "steel-inspector-certifications"]),
     ("For QA/QC engineers and inspectors", ["qa-qc-hold-points-steel-structure-foundations", "pre-pour-checklist", "concrete-testing-foundations-slump-cubes",
