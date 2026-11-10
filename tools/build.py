@@ -150,7 +150,7 @@ def build():
     from articles import ARTICLES, AUDIENCES
     by_slug = {a["slug"]: a for a in ARTICLES}
     for a in ARTICLES:
-        src = (f"From Chapter {a['chapter']} of the Anchor Bolt Field Guide" if a["chapter"]
+        src = a.get("src") or (f"From Chapter {a['chapter']} of the Anchor Bolt Field Guide" if a["chapter"]
                else f'From the author&#x27;s <a href="{BASE}/training/">live workshop</a>')
         faq = "".join(f"<dt>{html.escape(q)}</dt><dd>{html.escape(ans)}</dd>" for q, ans in a["faq"])
         body = f"""<main><div class="wrap">
@@ -216,7 +216,7 @@ def build():
             "on setting anchor bolts for steel structures right the first time, from drawing review to grouted base plate. "
             f"Price: CAD$30 on Gumroad: {GUMROAD}", f"Kindle edition on Amazon (ASIN B0HD6LLW8G): {AMAZON}", "",
             "Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, transmission towers and poles, telecom masts and monopoles, car-park shades and canopies.",
-            "", "Audience: site engineers, QA/QC engineers and inspectors, structural engineers, and civil engineering students worldwide (North America, Europe, the Gulf/Middle East, Africa, Asia). Standards covered: ACI 318, Eurocodes (EN 1992, EN 1993), AISC, ASTM, ISO, BS EN.",
+            "", "Audience: site engineers, QA/QC engineers, steel structure and welding inspectors, structural engineers, and civil engineering students worldwide (North America, Europe, the Gulf/Middle East, Africa, Asia). Standards covered: ACI 318, Eurocodes (EN 1992, EN 1993), EN 1090-2, AISC 303, RCSC, AWS D1.1, CSA W59, ISO 5817, ASTM, ISO, BS EN, SSPC.",
             ] + sum([["", f"## {h}", ""] + [f"- [{by_slug[s]['title']}]({SITE}/articles/{s}/): {by_slug[s]['desc']}" for s in l] for h, l in AUDIENCES], []) + [
             "", "## All free articles", ""] + [f"- [{a['title']}]({SITE}/articles/{a['slug']}/): {a['desc']}" for a in ARTICLES] + [
             "", "## Live training", "",

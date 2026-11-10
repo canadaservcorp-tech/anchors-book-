@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Steel structure inspection checklist for QA/QC inspectors (receiving to final bolting) | Anchor Bolt Field Guide</title>
+<meta name="description" content="Steel structure inspection in 6 stages: anchor-bolt survey, material receiving, erection, bolting, welding and coatings, with the standard and the record for each.">
+<link rel="canonical" href="https://canadaservcorp-tech.github.io/anchors-book-/articles/steel-structure-inspection-checklist/">
+<meta name="author" content="Hicham Zein Eddine">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Steel structure inspection checklist for QA/QC inspectors (receiving to final bolting)">
+<meta property="og:description" content="Steel structure inspection in 6 stages: anchor-bolt survey, material receiving, erection, bolting, welding and coatings, with the standard and the record for each.">
+<meta property="og:url" content="https://canadaservcorp-tech.github.io/anchors-book-/articles/steel-structure-inspection-checklist/">
+<meta property="og:image" content="https://canadaservcorp-tech.github.io/anchors-book-/img/og.jpg">
+<meta property="og:site_name" content="Anchor Bolt Field Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#0e203a">
+<link rel="icon" href="/anchors-book-/img/favicon.png">
+<style>
+:root{--navy:#0e203a;--navy2:#16304f;--gold:#f0aa3c;--ink:#1c2533;--muted:#5b6678;--bg:#f6f7f9;--line:#dde2ea}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
+a{color:#1d4f91}img{max-width:100%;height:auto;display:block}
+header.top{background:var(--navy);color:#fff}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{color:#fff;text-decoration:none;font-weight:800;letter-spacing:.3px}.brand span{color:var(--gold)}
+header nav a{color:#d7e0ee;text-decoration:none;margin-left:16px;font-size:15px}header nav a:hover{color:#fff}
+footer nav a{color:var(--muted);margin:0 4px}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:44px 0 52px}
+.hero .wrap{display:grid;grid-template-columns:1fr 260px;gap:36px;align-items:center}
+.hero h1{font-size:34px;line-height:1.2;margin:0 0 14px}.hero p{color:#d7e0ee;margin:0 0 18px}
+.kicker{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+.btn{display:inline-block;background:var(--gold);color:#13213a;font-weight:800;text-decoration:none;padding:13px 22px;border-radius:8px;margin:6px 0}
+.btn:hover{filter:brightness(1.05)}.btn.amz{background:#fff;color:#13213a;border:2px solid #13213a;padding:11px 20px;margin-left:6px}.btn.ghost{background:transparent;color:#fff;border:2px solid #ffffff55}
+.price{color:#fff;font-weight:700;margin-left:10px}
+main{padding:34px 0 10px}main h1{font-size:30px;line-height:1.25;margin:.2em 0 .5em}
+h2{font-size:23px;margin:1.6em 0 .5em;color:var(--navy)}h3{font-size:19px;margin:1.3em 0 .4em}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:18px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.grid a.card{display:block;text-decoration:none;color:inherit;margin:0}.grid a.card:hover{border-color:var(--gold)}
+.grid h3{margin:0 0 6px;font-size:17px;color:var(--navy)}.grid p{margin:0;color:var(--muted);font-size:15px}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:15px;margin:12px 0}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}th{background:var(--navy);color:#fff}
+.note{font-size:14px;color:var(--muted)}
+.key{border-left:4px solid var(--gold);background:#fff;padding:14px 18px;border-radius:0 10px 10px 0;margin:18px 0}
+.cta{background:var(--navy);color:#fff;border-radius:14px;padding:24px;margin:30px 0;display:grid;grid-template-columns:110px 1fr;gap:20px;align-items:center}
+.cta p{margin:.2em 0;color:#d7e0ee}.cta strong{color:#fff}
+figure{margin:18px 0}figure img{border:1px solid var(--line);border-radius:8px;background:#fff}figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+.pages{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.crumbs{font-size:14px;color:var(--muted)}.crumbs a{color:var(--muted)}
+.faq dt{font-weight:700;margin-top:14px}.faq dd{margin:4px 0 0}
+footer{color:var(--muted);font-size:14px;padding:30px 0 40px;border-top:1px solid var(--line);margin-top:30px}
+ul.check{list-style:none;padding:0}ul.check li{padding:9px 0 9px 34px;border-bottom:1px solid var(--line);position:relative}
+ul.check li:before{content:"";position:absolute;left:2px;top:12px;width:18px;height:18px;border:2px solid var(--navy);border-radius:3px}
+@media(max-width:720px){.hero .wrap{grid-template-columns:1fr}.hero .cover{max-width:220px}.hero h1{font-size:27px}.cta{grid-template-columns:1fr}.cta img{max-width:110px}nav a{margin:0 14px 0 0}header nav a{margin:0 12px 0 0;white-space:nowrap;font-size:14px}}
+@media print{header.top,.cta,.btn,footer nav,.noprint{display:none!important}body{background:#fff;font-size:13pt}.card{border:0;padding:0}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Steel structure inspection checklist for QA/QC inspectors (receiving to final bolting)", "description": "Steel structure inspection in 6 stages: anchor-bolt survey, material receiving, erection, bolting, welding and coatings, with the standard and the record for each.", "author": {"@type": "Person", "name": "Hicham Zein Eddine", "url": "https://canadaservcorp-tech.github.io/anchors-book-/about/", "description": "20+ years of steel-structure and foundation site experience (Qatar, UAE, Poland, Canada)."}, "datePublished": "2026-11-10", "dateModified": "2026-11-10", "image": "https://canadaservcorp-tech.github.io/anchors-book-/img/p-qaqc.jpg", "mainEntityOfPage": "https://canadaservcorp-tech.github.io/anchors-book-/articles/steel-structure-inspection-checklist/", "isPartOf": {"@type": "WebSite", "name": "Anchor Bolt Field Guide", "url": "https://canadaservcorp-tech.github.io/anchors-book-/"}, "citation": {"@type": "Book", "name": "The Steel-Structure Foundation & Anchor Bolt Field Guide", "url": "https://canadacorp.gumroad.com/l/anchor-bolt-guide"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What are the stages of steel structure inspection?", "acceptedAnswer": {"@type": "Answer", "text": "Anchor-bolt survey before erection, material receiving, erection and plumbness, bolting, welding, and coatings."}}, {"@type": "Question", "name": "Which standard governs steel erection inspection?", "acceptedAnswer": {"@type": "Answer", "text": "The project specification. Common references are the AISC Code of Standard Practice (AISC 303) in North America and EN 1090-2 in Europe."}}, {"@type": "Question", "name": "Why survey anchor bolts before steel erection?", "acceptedAnswer": {"@type": "Answer", "text": "Because misplaced bolts are cheapest to correct before a column is lifted, and the correction must be approved by the structural engineer."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://canadaservcorp-tech.github.io/anchors-book-/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://canadaservcorp-tech.github.io/anchors-book-/articles/"}, {"@type": "ListItem", "position": 3, "name": "Steel structure inspection checklist for QA/QC inspectors (receiving to final bolting)", "item": "https://canadaservcorp-tech.github.io/anchors-book-/articles/steel-structure-inspection-checklist/"}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/anchors-book-/">Anchor Bolt <span>Field Guide</span></a>
+<nav><a href="/anchors-book-/articles/">Articles</a><a href="/anchors-book-/training/">Training</a><a href="/anchors-book-/checklist/">Free checklist</a><a href="/anchors-book-/about/">Author</a><a href="/anchors-book-/fr/" hreflang="fr">FR</a><a href="/anchors-book-/ar/" hreflang="ar">عربي</a><a href="https://canadacorp.gumroad.com/l/anchor-bolt-guide?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=nav">Get the book</a></nav>
+</div></header>
+<main><div class="wrap">
+<p class="crumbs"><a href="/anchors-book-/">Home</a> / <a href="/anchors-book-/articles/">Articles</a></p>
+<h1>Steel structure inspection checklist for QA/QC inspectors (receiving to final bolting)</h1>
+<p class="note">By <a href="/anchors-book-/about/">Hicham Zein Eddine</a> &middot; Steel inspection reference note &middot; the guide itself covers the foundation stage</p>
+<div class="key"><strong>Short answer:</strong> A steel-structure inspection runs in six stages: as-built survey of the anchor bolts before erection, material receiving against mill certificates, erection and plumbness, bolting, welding, then coatings and touch-up. Each stage is checked against the project specification and the referenced standard, and each leaves a signed record.</div>
+<p>Steel is inspected at every hand-over: from the foundation crew to the erector, from the fabricator to the site, and from the erector to the painter. A defect found at the right stage costs a phone call; found after the cladding is on, it costs a crane.</p>
+<h2>The 6 stages</h2>
+<table><tr><th>Stage</th><th>What the inspector checks</th><th>Typical reference</th><th>Record</th></tr>
+<tr><td>1. Before erection</td><td>As-built survey of anchor-bolt positions, projection and top-of-grout levels</td><td>Project tolerances, AISC Code of Standard Practice</td><td>Anchor-bolt as-built survey</td></tr>
+<tr><td>2. Material receiving</td><td>Grade, heat number, section size, marking, damage; mill certificates</td><td>ASTM A6 / EN 10204 type 3.1</td><td>Receiving report</td></tr>
+<tr><td>3. Erection</td><td>Column plumbness, alignment, elevations, temporary bracing</td><td>AISC 303 / EN 1090-2</td><td>Erection survey</td></tr>
+<tr><td>4. Bolting</td><td>Bolt grade, washers, snug-tight or pretension method</td><td>RCSC Specification / EN 1090-2</td><td>Bolting inspection log</td></tr>
+<tr><td>5. Welding</td><td>Welder qualification, WPS, visual inspection, NDT as specified</td><td>AWS D1.1 / ISO 5817 / CSA W59</td><td>Weld inspection and NDT reports</td></tr>
+<tr><td>6. Coatings</td><td>Surface preparation, dry film thickness, galvanizing damage repair</td><td>SSPC / ISO 8501-1 / ISO 19840 / ISO 1461</td><td>Coating inspection report</td></tr></table>
+<h2>Start with the foundation</h2>
+<p>Most erection problems begin at the anchor bolts. Before the first column arrives, survey every bolt group: position, projection above concrete and thread condition. A bolt that is 20 mm out is a fix on paper today and a problem with a column hanging on the crane tomorrow. The guide's <a href="/anchors-book-/articles/pre-pour-checklist/">pre-pour checklist</a> and <a href="/anchors-book-/articles/anchor-bolt-tolerances/">tolerance table</a> cover that stage.</p>
+<h2>What governs</h2>
+<p>The project specification and the inspection and test plan (ITP) govern. The standards in the table are the common references; the project names the ones that apply and the acceptance criteria.</p>
+<h2>Questions engineers ask</h2>
+<dl class="faq"><dt>What are the stages of steel structure inspection?</dt><dd>Anchor-bolt survey before erection, material receiving, erection and plumbness, bolting, welding, and coatings.</dd><dt>Which standard governs steel erection inspection?</dt><dd>The project specification. Common references are the AISC Code of Standard Practice (AISC 303) in North America and EN 1090-2 in Europe.</dd><dt>Why survey anchor bolts before steel erection?</dt><dd>Because misplaced bolts are cheapest to correct before a column is lifted, and the correction must be approved by the structural engineer.</dd></dl>
+<div class="cta"><img src="/anchors-book-/img/cover.jpg" alt="Cover of the Anchor Bolt Field Guide" width="110" loading="lazy">
+<div><p><strong>The Steel-Structure Foundation & Anchor Bolt Field Guide</strong></p>
+<p>62 pages, the full site sequence from drawing to grouted base plate: survey, excavation, blinding, rebar, the anchor-bolt template, QA/QC hold points and field fixes. Written by Hicham Zein Eddine, from 20+ years on steel-structure and foundation sites in Qatar, the UAE, Poland and Canada.</p>
+<a class="btn" href="https://canadacorp.gumroad.com/l/anchor-bolt-guide?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=steel-structure-inspection-checklist">Get the full 62-page guide &rarr;</a> <a class="btn amz" href="https://www.amazon.com/dp/B0HD6LLW8G" rel="noopener">Kindle edition on Amazon</a></div></div>
+<h2>Keep reading</h2>
+<div class="grid"><a class="card" href="/anchors-book-/articles/high-strength-bolt-tightening-inspection/"><h3>High-strength bolt tightening inspection: snug-tight, turn-of-nut, DTI and TC bolts</h3><p>How QA/QC inspectors check structural bolting: snug-tight vs pretensioned joints, turn-of-nut rotation, calibr…</p></a><a class="card" href="/anchors-book-/articles/structural-welding-visual-inspection/"><h3>Structural welding visual inspection: defects, NDT methods and AWS D1.1 / ISO 5817</h3><p>What a welding inspector checks on structural steel before, during and after welding: WPS, welder qualificatio…</p></a><a class="card" href="/anchors-book-/articles/steel-erection-tolerances-plumbness/"><h3>Steel erection tolerances: column plumbness, base plates and anchor bolts</h3><p>Steel erection tolerances for QA/QC inspectors: column out-of-plumb 1/500 (AISC 303), base plate and anchor-bo…</p></a></div>
+</div></main>
+<footer><div class="wrap">
+<p>This content is provided for professional educational use and does not replace a licensed structural engineer or the governing code for your jurisdiction. Always verify against the approved documents for your project.</p>
+<p>&copy; 2026 Hicham Zein Eddine. Content adapted from <em>The Steel-Structure Foundation & Anchor Bolt Field Guide</em>.</p>
+<nav><a href="/anchors-book-/">Home</a> &middot; <a href="/anchors-book-/articles/">Articles</a> &middot; <a href="/anchors-book-/checklist/">Free pre-pour checklist</a> &middot; <a href="/anchors-book-/training/">Training</a> &middot; <a href="/anchors-book-/about/">About the author</a> &middot; <a href="/anchors-book-/fr/">Français</a> &middot; <a href="/anchors-book-/ar/">العربية</a> &middot; <a href="https://canadacorp.gumroad.com/l/anchor-bolt-guide">Buy the guide</a></nav>
+<p class="credit">Website by <a href="https://www.ateliersurmesure.ca">Atelier Sur Mesure</a></p>
+</div></footer>
+<script src="https://www.ateliersurmesure.ca/t.js" defer></script>
+</body>
+</html>
