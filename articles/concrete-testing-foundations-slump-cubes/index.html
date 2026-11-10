@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Concrete testing for foundations: slump, temperature and 7/28-day cubes | Anchor Bolt Field Guide</title>
+<meta name="description" content="What the QA/QC engineer checks when concrete arrives and after curing: slump, temperature, cube sampling, 7-day and 28-day results, and what to do with a low result.">
+<link rel="canonical" href="https://canadaservcorp-tech.github.io/anchors-book-/articles/concrete-testing-foundations-slump-cubes/">
+<meta name="author" content="Hicham Zein Eddine">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Concrete testing for foundations: slump, temperature and 7/28-day cubes">
+<meta property="og:description" content="What the QA/QC engineer checks when concrete arrives and after curing: slump, temperature, cube sampling, 7-day and 28-day results, and what to do with a low result.">
+<meta property="og:url" content="https://canadaservcorp-tech.github.io/anchors-book-/articles/concrete-testing-foundations-slump-cubes/">
+<meta property="og:image" content="https://canadaservcorp-tech.github.io/anchors-book-/img/og.jpg">
+<meta property="og:site_name" content="Anchor Bolt Field Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#0e203a">
+<link rel="icon" href="/anchors-book-/img/favicon.png">
+<style>
+:root{--navy:#0e203a;--navy2:#16304f;--gold:#f0aa3c;--ink:#1c2533;--muted:#5b6678;--bg:#f6f7f9;--line:#dde2ea}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
+a{color:#1d4f91}img{max-width:100%;height:auto;display:block}
+header.top{background:var(--navy);color:#fff}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{color:#fff;text-decoration:none;font-weight:800;letter-spacing:.3px}.brand span{color:var(--gold)}
+header nav a{color:#d7e0ee;text-decoration:none;margin-left:16px;font-size:15px}header nav a:hover{color:#fff}
+footer nav a{color:var(--muted);margin:0 4px}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:44px 0 52px}
+.hero .wrap{display:grid;grid-template-columns:1fr 260px;gap:36px;align-items:center}
+.hero h1{font-size:34px;line-height:1.2;margin:0 0 14px}.hero p{color:#d7e0ee;margin:0 0 18px}
+.kicker{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+.btn{display:inline-block;background:var(--gold);color:#13213a;font-weight:800;text-decoration:none;padding:13px 22px;border-radius:8px;margin:6px 0}
+.btn:hover{filter:brightness(1.05)}.btn.amz{background:#fff;color:#13213a;border:2px solid #13213a;padding:11px 20px;margin-left:6px}.btn.ghost{background:transparent;color:#fff;border:2px solid #ffffff55}
+.price{color:#fff;font-weight:700;margin-left:10px}
+main{padding:34px 0 10px}main h1{font-size:30px;line-height:1.25;margin:.2em 0 .5em}
+h2{font-size:23px;margin:1.6em 0 .5em;color:var(--navy)}h3{font-size:19px;margin:1.3em 0 .4em}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:18px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.grid a.card{display:block;text-decoration:none;color:inherit;margin:0}.grid a.card:hover{border-color:var(--gold)}
+.grid h3{margin:0 0 6px;font-size:17px;color:var(--navy)}.grid p{margin:0;color:var(--muted);font-size:15px}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:15px;margin:12px 0}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}th{background:var(--navy);color:#fff}
+.note{font-size:14px;color:var(--muted)}
+.key{border-left:4px solid var(--gold);background:#fff;padding:14px 18px;border-radius:0 10px 10px 0;margin:18px 0}
+.cta{background:var(--navy);color:#fff;border-radius:14px;padding:24px;margin:30px 0;display:grid;grid-template-columns:110px 1fr;gap:20px;align-items:center}
+.cta p{margin:.2em 0;color:#d7e0ee}.cta strong{color:#fff}
+figure{margin:18px 0}figure img{border:1px solid var(--line);border-radius:8px;background:#fff}figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+.pages{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.crumbs{font-size:14px;color:var(--muted)}.crumbs a{color:var(--muted)}
+.faq dt{font-weight:700;margin-top:14px}.faq dd{margin:4px 0 0}
+footer{color:var(--muted);font-size:14px;padding:30px 0 40px;border-top:1px solid var(--line);margin-top:30px}
+ul.check{list-style:none;padding:0}ul.check li{padding:9px 0 9px 34px;border-bottom:1px solid var(--line);position:relative}
+ul.check li:before{content:"";position:absolute;left:2px;top:12px;width:18px;height:18px;border:2px solid var(--navy);border-radius:3px}
+@media(max-width:720px){.hero .wrap{grid-template-columns:1fr}.hero .cover{max-width:220px}.hero h1{font-size:27px}.cta{grid-template-columns:1fr}.cta img{max-width:110px}nav a{margin:0 14px 0 0}header nav a{margin:0 12px 0 0;white-space:nowrap;font-size:14px}}
+@media print{header.top,.cta,.btn,footer nav,.noprint{display:none!important}body{background:#fff;font-size:13pt}.card{border:0;padding:0}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Concrete testing for foundations: slump, temperature and 7/28-day cubes", "description": "What the QA/QC engineer checks when concrete arrives and after curing: slump, temperature, cube sampling, 7-day and 28-day results, and what to do with a low result.", "author": {"@type": "Person", "name": "Hicham Zein Eddine", "url": "https://canadaservcorp-tech.github.io/anchors-book-/about/", "description": "20+ years of steel-structure and foundation site experience (Qatar, UAE, Poland, Canada)."}, "datePublished": "2026-11-10", "dateModified": "2026-11-10", "image": "https://canadaservcorp-tech.github.io/anchors-book-/img/p-qaqc.jpg", "mainEntityOfPage": "https://canadaservcorp-tech.github.io/anchors-book-/articles/concrete-testing-foundations-slump-cubes/", "isPartOf": {"@type": "WebSite", "name": "Anchor Bolt Field Guide", "url": "https://canadaservcorp-tech.github.io/anchors-book-/"}, "citation": {"@type": "Book", "name": "The Steel-Structure Foundation & Anchor Bolt Field Guide", "url": "https://canadacorp.gumroad.com/l/anchor-bolt-guide"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many cubes are taken per concrete sample?", "acceptedAnswer": {"@type": "Answer", "text": "Typically 3 cubes per sample, broken at 7, 14 and 28 days (BS EN 12390); follow your project specification."}}, {"@type": "Question", "name": "What slump is acceptable for foundation concrete?", "acceptedAnswer": {"@type": "Answer", "text": "Whatever the project specification states, for example 75-100 mm, measured to BS EN 12350 or ASTM C143."}}, {"@type": "Question", "name": "What happens if the 28-day cube result is low?", "acceptedAnswer": {"@type": "Answer", "text": "The designer is notified at once and decides: capacity re-check, core testing, or strengthening."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://canadaservcorp-tech.github.io/anchors-book-/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://canadaservcorp-tech.github.io/anchors-book-/articles/"}, {"@type": "ListItem", "position": 3, "name": "Concrete testing for foundations: slump, temperature and 7/28-day cubes", "item": "https://canadaservcorp-tech.github.io/anchors-book-/articles/concrete-testing-foundations-slump-cubes/"}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/anchors-book-/">Anchor Bolt <span>Field Guide</span></a>
+<nav><a href="/anchors-book-/articles/">Articles</a><a href="/anchors-book-/training/">Training</a><a href="/anchors-book-/checklist/">Free checklist</a><a href="/anchors-book-/about/">Author</a><a href="/anchors-book-/fr/" hreflang="fr">FR</a><a href="/anchors-book-/ar/" hreflang="ar">عربي</a><a href="https://canadacorp.gumroad.com/l/anchor-bolt-guide?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=nav">Get the book</a></nav>
+</div></header>
+<main><div class="wrap">
+<p class="crumbs"><a href="/anchors-book-/">Home</a> / <a href="/anchors-book-/articles/">Articles</a></p>
+<h1>Concrete testing for foundations: slump, temperature and 7/28-day cubes</h1>
+<p class="note">By <a href="/anchors-book-/about/">Hicham Zein Eddine</a> &middot; From Chapter 14 of the Anchor Bolt Field Guide</p>
+<div class="key"><strong>Short answer:</strong> On delivery, check the ticket, record slump (BS EN 12350 / ASTM C143) and temperature (BS EN 206 / ASTM C1064), and cast cubes: typically 3 per sample, broken at 7, 14 and 28 days (BS EN 12390 / ASTM C39). The 28-day result must reach the specified grade; a low result goes straight to the designer.</div>
+
+<table><tr><th>Test</th><th>Standard</th><th>Acceptance</th></tr>
+<tr><td>Slump</td><td>BS EN 12350 / ASTM C143</td><td>Per project specification (for example 75-100 mm)</td></tr>
+<tr><td>Temperature</td><td>BS EN 206 / ASTM C1064</td><td>The guide uses &lt; 32 &deg;C (moderate) / &lt; 37 &deg;C (hot climate); the project specification governs</td></tr>
+<tr><td>Compressive, 7 days</td><td>BS EN 12390 / ASTM C39</td><td>Early check</td></tr>
+<tr><td>Compressive, 28 days</td><td>BS EN 12390 / ASTM C39</td><td>At least the specified grade (for example 30 MPa)</td></tr>
+<tr><td>Cubes per sample</td><td>BS EN 12390</td><td>3 cubes, broken at 7 / 14 / 28 days</td></tr></table>
+<p class="note">Appendix B of the guide. Ready-mix specification and delivery: BS EN 206 / ASTM C94. In-place soil density before the foundation: sand cone, ASTM D1556.</p>
+<h2>At the truck</h2>
+<ul><li>Check the delivery ticket against the mix ordered, and keep it: it is the record for hold point 8.</li>
+<li>Record slump and temperature before the concrete is accepted.</li>
+<li>Cast and label the cubes so each result traces back to the element poured.</li></ul>
+<h2>A low 28-day result</h2>
+<p>Example: 25 MPa against a specified 30 MPa. Notify the designer immediately; never hide a failed result. The designer may re-check the foundation at the lower strength, call for cores drilled from the hardened concrete for a true in-situ value, and, if it is genuinely insufficient, require strengthening such as an enlarged footing or bonded steel plates.</p>
+
+<h2>Questions engineers ask</h2>
+<dl class="faq"><dt>How many cubes are taken per concrete sample?</dt><dd>Typically 3 cubes per sample, broken at 7, 14 and 28 days (BS EN 12390); follow your project specification.</dd><dt>What slump is acceptable for foundation concrete?</dt><dd>Whatever the project specification states, for example 75-100 mm, measured to BS EN 12350 or ASTM C143.</dd><dt>What happens if the 28-day cube result is low?</dt><dd>The designer is notified at once and decides: capacity re-check, core testing, or strengthening.</dd></dl>
+<div class="cta"><img src="/anchors-book-/img/cover.jpg" alt="Cover of the Anchor Bolt Field Guide" width="110" loading="lazy">
+<div><p><strong>The Steel-Structure Foundation & Anchor Bolt Field Guide</strong></p>
+<p>62 pages, the full site sequence from drawing to grouted base plate: survey, excavation, blinding, rebar, the anchor-bolt template, QA/QC hold points and field fixes. Written by Hicham Zein Eddine, from 20+ years on steel-structure and foundation sites in Qatar, the UAE, Poland and Canada.</p>
+<a class="btn" href="https://canadacorp.gumroad.com/l/anchor-bolt-guide?utm_source=guide-site&amp;utm_medium=web&amp;utm_campaign=concrete-testing-foundations-slump-cubes">Get the full 62-page guide &rarr;</a> <a class="btn amz" href="https://www.amazon.com/dp/B0HD6LLW8G" rel="noopener">Kindle edition on Amazon</a></div></div>
+<h2>Keep reading</h2>
+<div class="grid"><a class="card" href="/anchors-book-/articles/pouring-concrete-around-anchor-bolts/"><h3>Pouring concrete around anchor bolts without moving them</h3><p>Never aim the pump at the bolts, pour all ready foundations at once to avoid cold joints, and stop only at a d…</p></a><a class="card" href="/anchors-book-/articles/src-vs-opc-cement-foundations/"><h3>SRC vs OPC: which cement for foundations?</h3><p>Sulfate-Resisting Cement below ground, Ordinary Portland Cement above ground, with typical grades for blinding…</p></a><a class="card" href="/anchors-book-/articles/qa-qc-hold-points-steel-structure-foundations/"><h3>QA/QC hold points for steel-structure foundations and anchor bolts (10-stage plan)</h3><p>For QA/QC engineers and inspectors: the 10 mandatory hold points from survey to 28-day cubes, who signs each o…</p></a></div>
+</div></main>
+<footer><div class="wrap">
+<p>This content is provided for professional educational use and does not replace a licensed structural engineer or the governing code for your jurisdiction. Always verify against the approved documents for your project.</p>
+<p>&copy; 2026 Hicham Zein Eddine. Content adapted from <em>The Steel-Structure Foundation & Anchor Bolt Field Guide</em>.</p>
+<nav><a href="/anchors-book-/">Home</a> &middot; <a href="/anchors-book-/articles/">Articles</a> &middot; <a href="/anchors-book-/checklist/">Free pre-pour checklist</a> &middot; <a href="/anchors-book-/training/">Training</a> &middot; <a href="/anchors-book-/about/">About the author</a> &middot; <a href="/anchors-book-/fr/">Français</a> &middot; <a href="/anchors-book-/ar/">العربية</a> &middot; <a href="https://canadacorp.gumroad.com/l/anchor-bolt-guide">Buy the guide</a></nav>
+<p class="credit">Website by <a href="https://www.ateliersurmesure.ca">Atelier Sur Mesure</a></p>
+</div></footer>
+<script src="https://www.ateliersurmesure.ca/t.js" defer></script>
+</body>
+</html>

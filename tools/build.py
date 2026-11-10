@@ -11,7 +11,7 @@ AMAZON = "https://www.amazon.com/dp/B0HD6LLW8G"
 TITLE = "The Steel-Structure Foundation & Anchor Bolt Field Guide"
 AUTHOR = "Hicham Zein Eddine"
 AUTHOR_NAME = "Hicham Zein Eddine"
-UPDATED = "2026-11-04"
+UPDATED = "2026-11-10"
 DISCLAIMER = ("This content is provided for professional educational use and does not replace a licensed "
               "structural engineer or the governing code for your jurisdiction. Always verify against the "
               "approved documents for your project.")
@@ -72,7 +72,8 @@ def page(path, title, desc, body, jsonld=None, og_type="article", image="img/og.
     ld = ""
     for block in (jsonld or []):
         ld += f'<script type="application/ld+json">{json.dumps(block, ensure_ascii=False)}</script>\n'
-    alt = "".join(f'<link rel="alternate" hreflang="{l}" href="{SITE}/{u}">\n' for l, u in LANG_ALTS.items()) + f'<link rel="alternate" hreflang="x-default" href="{SITE}/">\n' if alts else ""
+    amap = alts if isinstance(alts, dict) else LANG_ALTS
+    alt = "".join(f'<link rel="alternate" hreflang="{l}" href="{SITE}/{u}">\n' for l, u in amap.items()) + f'<link rel="alternate" hreflang="x-default" href="{SITE}/{amap["en"]}">\n' if alts else ""
     full_title = title if title.endswith("Field Guide") else f"{title} | Anchor Bolt Field Guide"
     return f"""<!doctype html>
 <html lang="{lang}"{' dir="rtl"' if lang == "ar" else ""}>
@@ -146,7 +147,8 @@ def write(rel, text):
     p.write_text(text, encoding="utf-8")
 
 def build():
-    from articles import ARTICLES
+    from articles import ARTICLES, AUDIENCES
+    by_slug = {a["slug"]: a for a in ARTICLES}
     for a in ARTICLES:
         src = (f"From Chapter {a['chapter']} of the Anchor Bolt Field Guide" if a["chapter"]
                else f'From the author&#x27;s <a href="{BASE}/training/">live workshop</a>')
@@ -163,12 +165,16 @@ def build():
 <h2>Keep reading</h2>
 <div class="grid">{''.join(f'<a class="card" href="{BASE}/articles/{o["slug"]}/"><h3>{html.escape(o["title"])}</h3><p>{html.escape(o["desc"][:110])}…</p></a>' for o in [x for x in ARTICLES if x['slug'] in a['related']])}</div>
 </div></main>"""
-        write(f"articles/{a['slug']}/index.html", page(f"articles/{a['slug']}/", a["title"], a["desc"], body, article_ld(a)))
+        from intl import QA_ALTS
+        alts = QA_ALTS if f"articles/{a['slug']}/" == QA_ALTS["en"] else False
+        write(f"articles/{a['slug']}/index.html", page(f"articles/{a['slug']}/", a["title"], a["desc"], body, article_ld(a), alts=alts))
 
     cards = "".join(f'<a class="card" href="{BASE}/articles/{a["slug"]}/"><h3>{html.escape(a["title"])}</h3><p>{html.escape(a["desc"][:120])}…</p></a>' for a in ARTICLES)
+    aud = "".join(f'<h2>{h}</h2><ul>' + "".join(f'<li><a href="{BASE}/articles/{s}/">{html.escape(by_slug[s]["title"])}</a></li>' for s in l) + "</ul>" for h, l in AUDIENCES)
+    aud += f'<p>In other languages: <a href="{BASE}/fr/qa-qc/" hreflang="fr">points d&#x27;arrêt AQ/CQ (français)</a> · <a href="{BASE}/ar/qa-qc/" hreflang="ar">نقاط التوقف لضبط الجودة (العربية)</a></p>'
     write("articles/index.html", page("articles/", "Anchor bolt and foundation articles for site engineers",
           "Free, practical articles on anchor bolts, templates, tolerances, grouting and pre-pour QA/QC for steel-structure foundations.",
-          f'<main><div class="wrap"><h1>Articles for site engineers and engineering students</h1><p>Practical answers taken from the field guide. Each one is short, sourced from the book, and ends with what to check on site.</p><div class="grid">{cards}</div>{cta("articles")}</div></main>',
+          f'<main><div class="wrap"><h1>Articles for site engineers and engineering students</h1><p>Practical answers taken from the field guide. Each one is short, sourced from the book, and ends with what to check on site.</p>{aud}<h2>All articles</h2><div class="grid">{cards}</div>{cta("articles")}</div></main>',
           og_type="website"))
 
     from checklist import CHECKLIST_BODY, CHECKLIST_LD
@@ -190,14 +196,16 @@ def build():
           "Live anchor-bolt and steel-structure foundation training by Hicham Zein Eddine: setting out, alignment, levelling, pre-pour hold points, protection, corrections. Zoom or Montréal–Laval, in English, French or Arabic.",
           TRAINING_BODY, TRAINING_LD, og_type="website", image="img/workshop.jpg"))
 
-    from intl import PAGES
+    from intl import PAGES, EXTRA_PAGES
     for code, pg in PAGES.items():
         write(f"{code}/index.html", page(f"{code}/", pg["title"], pg["desc"], pg["body"], pg["ld"], og_type="website", lang=code, alts=True, nav=pg["nav"]))
+    for path, pg in EXTRA_PAGES.items():
+        write(f"{path}index.html", page(path, pg["title"], pg["desc"], pg["body"], pg["ld"], lang=pg["lang"], alts=pg["alts"], nav=pg["nav"], image="img/p-qaqc.jpg"))
 
     write("404.html", page("404.html", "Page not found", "This page does not exist.",
           f'<main><div class="wrap"><h1>Page not found</h1><p><a href="{BASE}/">Go to the home page</a> or read the <a href="{BASE}/articles/">articles</a>.</p></div></main>').replace('content="index,follow,max-image-preview:large"', 'content="noindex"'))
 
-    urls = ["", "fr/", "ar/", "training/", "articles/", "checklist/", "about/"] + [f"articles/{a['slug']}/" for a in ARTICLES]
+    urls = ["", "fr/", "ar/", "training/", "articles/", "checklist/", "about/"] + [f"articles/{a['slug']}/" for a in ARTICLES] + list(EXTRA_PAGES)
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           "".join(f"  <url><loc>{SITE}/{u}</loc><lastmod>{UPDATED}</lastmod></url>\n" for u in urls) + "</urlset>\n")
     bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot",
@@ -208,12 +216,16 @@ def build():
             "on setting anchor bolts for steel structures right the first time, from drawing review to grouted base plate. "
             f"Price: CAD$30 on Gumroad: {GUMROAD}", f"Kindle edition on Amazon (ASIN B0HD6LLW8G): {AMAZON}", "",
             "Applies to pre-engineered buildings (PEB), hot-rolled steel frames, warehouses, transmission towers and poles, telecom masts and monopoles, car-park shades and canopies.",
-            "", "## Free articles", ""] + [f"- [{a['title']}]({SITE}/articles/{a['slug']}/): {a['desc']}" for a in ARTICLES] + [
+            "", "Audience: site engineers, QA/QC engineers and inspectors, structural engineers, and civil engineering students worldwide (North America, Europe, the Gulf/Middle East, Africa, Asia). Standards covered: ACI 318, Eurocodes (EN 1992, EN 1993), AISC, ASTM, ISO, BS EN.",
+            ] + sum([["", f"## {h}", ""] + [f"- [{by_slug[s]['title']}]({SITE}/articles/{s}/): {by_slug[s]['desc']}" for s in l] for h, l in AUDIENCES], []) + [
+            "", "## All free articles", ""] + [f"- [{a['title']}]({SITE}/articles/{a['slug']}/): {a['desc']}" for a in ARTICLES] + [
             "", "## Live training", "",
             f"- [Training page]({SITE}/training/): live anchor-bolt and steel-structure foundation training for QA/QC inspectors, site engineers, foremen and erection crews. Zoom or in person in Montréal–Laval, in English, French or Arabic. Private formats: 3 hours (CAD$900), full day (CAD$1,500), 3 days (CAD$4,500): https://canadacorp.gumroad.com/l/anchor-bolt-workshop",
             "- Next public session: Anchor Bolts & Steel-Structure Foundations: Get It Right Before the Pour. Live on Zoom, Thursday December 3, 2026, 8:00-11:00 Montréal time. Eventbrite (CA$129 + tax): https://www.eventbrite.ca/e/2004284399593 or Maven (US$200): https://maven.com/hicham-zein-eddine/anchor-bolts-workshop",
             "", "## Other languages", "", f"- [Français]({SITE}/fr/): le guide et la formation sur les boulons d'ancrage, au Québec et en ligne.",
             f"- [العربية]({SITE}/ar/): دليل وتدريب براغي التثبيت وأساسات المنشآت الفولاذية.",
+            f"- [Points d'arrêt AQ/CQ (français)]({SITE}/fr/qa-qc/): les 10 points d'arrêt d'une fondation de charpente d'acier.",
+            f"- [نقاط التوقف لضبط الجودة (العربية)]({SITE}/ar/qa-qc/): نقاط التوقف العشر لمهندسي QA/QC.",
             "", "## Free resources", "", f"- [Pre-pour checklist (final gate)]({SITE}/checklist/): printable, no sign-up.",
             f"- [About the author]({SITE}/about/): {AUTHOR}'s site experience, topics, and workshops on anchor bolts, foundations and steel erection.",
             "", "## Book contents", "", "15 chapters: drawings, setting out, safe access, excavation, trench bottom, anti-termite treatment, polyethylene sheet, blinding, footing formwork, rebar, anchor bolts, base plate and grouting, post-installed anchors, QA/QC, troubleshooting; appendices on anchor-bolt specifications, concrete testing, inspection checklist and unit conversions.",

@@ -606,3 +606,181 @@ ARTICLES = [
 "related": ["pre-pour-checklist", "misaligned-anchor-bolts", "anchor-bolt-setting-out-alignment-levelling"],
 },
 ]
+
+HOLD_POINTS = [
+    ("1. Pre-excavation", "Survey control points verified", "Surveyor / Engineer", "Control-point log"),
+    ("2. Post-excavation", "Depth, width and compaction (field density test, FDT)", "Geotechnical", "FDT and compaction report"),
+    ("3. Pre-blinding", "Polyethylene sheet and anti-termite treatment", "Engineer / Inspector", "Daily log"),
+    ("4. Post-blinding", "Blinding level verified", "Surveyor / Engineer", "Level check"),
+    ("5. Pre-reinforcement", "Rebar grade and diameter against mill certificates", "Engineer / QA-QC", "Mill certificates"),
+    ("6. Anchor-bolt setting", "Bolt grade, diameter and pattern against the drawing", "Engineer / Fabricator", "Template check"),
+    ("7. Pre-concrete (final gate)", "All bolts, rebar, formwork, levels, cleanliness", "Consultant / Client", "Cast-in sign-off"),
+    ("8. Fresh concrete", "Slump and temperature recorded; cubes cast", "Technician / Engineer", "Delivery ticket and test report"),
+    ("9. Post-curing", "7-day cube result received", "Laboratory", "Lab report"),
+    ("10. Final acceptance", "28-day cube result received", "Laboratory", "Lab report"),
+]
+HOLD_TABLE = ("<table><tr><th>Hold point</th><th>What is checked</th><th>Responsible</th><th>Record</th></tr>"
+              + "".join(f"<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td></tr>" for a, b, c, d in HOLD_POINTS) + "</table>")
+
+ARTICLES += [
+{
+"slug": "qa-qc-hold-points-steel-structure-foundations",
+"title": "QA/QC hold points for steel-structure foundations and anchor bolts (10-stage plan)",
+"desc": "For QA/QC engineers and inspectors: the 10 mandatory hold points from survey to 28-day cubes, who signs each one, and the record that proves it.",
+"chapter": 14, "img": "p-qaqc",
+"answer": "A steel-structure foundation has 10 hold points: survey control, excavation and compaction, polyethylene and anti-termite, blinding level, rebar against mill certificates, anchor-bolt setting, the pre-concrete final gate, fresh-concrete tests, the 7-day cubes and the 28-day cubes. Each stage is signed by a named person and leaves a record; no stage is passed without it.",
+"body": f"""
+<p>Quality is not inspected into the work; it must be built into the work. The QA/QC plan turns that idea into hold points: stages the site cannot pass until someone has inspected them, signed, and filed a record. The guide references this plan to ACI 318 Chapter 26 and ISO 9001.</p>
+<h2>The 10 mandatory hold points</h2>
+{HOLD_TABLE}
+<p class="note">Chapter 14 of the guide. Adapt the responsible party and record names to your project's inspection and test plan (ITP).</p>
+<h2>Three rules that make the plan work</h2>
+<ul><li><strong>Verify at each stage.</strong> A defect found at blinding costs a few hours; the same defect found at erection costs a cut bolt and a post-installed anchor.</li>
+<li><strong>Document what you verify.</strong> A check without a record did not happen, as far as the client and the consultant are concerned.</li>
+<li><strong>Keep it traceable.</strong> Mill certificates, delivery tickets and cube reports must link to the element they belong to.</li></ul>
+<h2>The final gate: hold point 7</h2>
+<p>Before concrete, everything is checked one last time: latest IFC drawings, bolt alignment and position, formwork, rebar and cover, anchor grade and diameter, template locked and welded to the rebar, debris blown out and washed, threads taped, safe access, lighting and a tested vibrator. Then the consultant or client signs. <a href="{BASE}/checklist/">The free printable checklist</a> has every line.</p>
+<h2>When a result fails</h2>
+<p>If the 28-day result comes back below the specified grade, notify the designer immediately and never hide it. The designer decides: a capacity re-check, core testing, or strengthening.</p>
+{fig("p-qaqc", "Page 50 of the guide: the mandatory hold points.")}
+""",
+"faq": [
+("What are the hold points for a steel-structure foundation?", "Survey control, excavation and compaction, polyethylene and anti-termite treatment, blinding level, rebar against mill certificates, anchor-bolt setting, the pre-concrete final gate, fresh-concrete tests, and the 7-day and 28-day cube results."),
+("Who signs the pre-concrete final gate?", "The consultant or the client, after a formal inspection. No signature, no pour."),
+("Which standards does a foundation QA/QC plan reference?", "The guide references ACI 318 Chapter 26 and ISO 9001; your project specification and ITP govern."),
+("What does a QA/QC engineer record for rebar?", "Grade and diameter checked against the mill certificates, before reinforcement is fixed."),
+],
+"related": ["pre-pour-checklist", "concrete-testing-foundations-slump-cubes", "anchor-bolt-interview-questions-qa-qc"],
+},
+{
+"slug": "concrete-testing-foundations-slump-cubes",
+"title": "Concrete testing for foundations: slump, temperature and 7/28-day cubes",
+"desc": "What the QA/QC engineer checks when concrete arrives and after curing: slump, temperature, cube sampling, 7-day and 28-day results, and what to do with a low result.",
+"chapter": 14, "img": "p-qaqc",
+"answer": "On delivery, check the ticket, record slump (BS EN 12350 / ASTM C143) and temperature (BS EN 206 / ASTM C1064), and cast cubes: typically 3 per sample, broken at 7, 14 and 28 days (BS EN 12390 / ASTM C39). The 28-day result must reach the specified grade; a low result goes straight to the designer.",
+"body": """
+<table><tr><th>Test</th><th>Standard</th><th>Acceptance</th></tr>
+<tr><td>Slump</td><td>BS EN 12350 / ASTM C143</td><td>Per project specification (for example 75-100 mm)</td></tr>
+<tr><td>Temperature</td><td>BS EN 206 / ASTM C1064</td><td>The guide uses &lt; 32 &deg;C (moderate) / &lt; 37 &deg;C (hot climate); the project specification governs</td></tr>
+<tr><td>Compressive, 7 days</td><td>BS EN 12390 / ASTM C39</td><td>Early check</td></tr>
+<tr><td>Compressive, 28 days</td><td>BS EN 12390 / ASTM C39</td><td>At least the specified grade (for example 30 MPa)</td></tr>
+<tr><td>Cubes per sample</td><td>BS EN 12390</td><td>3 cubes, broken at 7 / 14 / 28 days</td></tr></table>
+<p class="note">Appendix B of the guide. Ready-mix specification and delivery: BS EN 206 / ASTM C94. In-place soil density before the foundation: sand cone, ASTM D1556.</p>
+<h2>At the truck</h2>
+<ul><li>Check the delivery ticket against the mix ordered, and keep it: it is the record for hold point 8.</li>
+<li>Record slump and temperature before the concrete is accepted.</li>
+<li>Cast and label the cubes so each result traces back to the element poured.</li></ul>
+<h2>A low 28-day result</h2>
+<p>Example: 25 MPa against a specified 30 MPa. Notify the designer immediately; never hide a failed result. The designer may re-check the foundation at the lower strength, call for cores drilled from the hardened concrete for a true in-situ value, and, if it is genuinely insufficient, require strengthening such as an enlarged footing or bonded steel plates.</p>
+""",
+"faq": [
+("How many cubes are taken per concrete sample?", "Typically 3 cubes per sample, broken at 7, 14 and 28 days (BS EN 12390); follow your project specification."),
+("What slump is acceptable for foundation concrete?", "Whatever the project specification states, for example 75-100 mm, measured to BS EN 12350 or ASTM C143."),
+("What happens if the 28-day cube result is low?", "The designer is notified at once and decides: capacity re-check, core testing, or strengthening."),
+],
+"related": ["qa-qc-hold-points-steel-structure-foundations", "src-vs-opc-cement-foundations", "pouring-concrete-around-anchor-bolts"],
+},
+{
+"slug": "anchor-bolt-foundation-standards-codes",
+"title": "Anchor bolt and foundation standards worldwide: ACI, Eurocode, AISC, ASTM, ISO, BS EN",
+"desc": "Which standard covers what on a steel-structure foundation, from concrete design and base plates to bolt grades, galvanising, grout and concrete testing, for projects in North America, Europe, the Gulf and beyond.",
+"chapter": None, "img": "p-standards",
+"answer": "Concrete design: ACI 318 or EN 1992-1-1. Anchor (fastening) design: ACI 318 Chapter 17 or EN 1992-4. Base plates: AISC Design Guide 1 or EN 1993-1-8. Bolt material: ASTM F1554 (Grades 36, 55, 105) or ISO 898-1 classes 8.8 / 10.9. Galvanising: ASTM A153 / A123 or ISO 1461. Grout: ASTM C1107. Concrete tests: BS EN 12350 / 12390 or ASTM C143 / C39. Use the edition your project specification names.",
+"body": """
+<p>The guide lists these standards on page 4. Projects specify one family or the other; cite the edition applicable to your jurisdiction, and the local project specification wins wherever it differs.</p>
+<table><tr><th>Subject</th><th>American</th><th>European / British</th></tr>
+<tr><td>Concrete design</td><td>ACI 318</td><td>EN 1992-1-1 (Eurocode 2)</td></tr>
+<tr><td>Fastenings / anchors in concrete</td><td>ACI 318 Chapter 17</td><td>EN 1992-4</td></tr>
+<tr><td>Steel design and base plates</td><td>AISC Steel Construction Manual, AISC Design Guide 1 (Base Plate and Anchor Rod Design)</td><td>EN 1993-1-8 (Eurocode 3, joints); BS 5950 on older UK-based specifications</td></tr>
+<tr><td>Anchor bolt material</td><td>ASTM F1554 Grades 36, 55, 105</td><td>ISO 898-1 property classes 8.8, 10.9</td></tr>
+<tr><td>Hot-dip galvanising</td><td>ASTM A153 (hardware), ASTM A123 (structural)</td><td>ISO 1461</td></tr>
+<tr><td>Non-shrink grout</td><td>ASTM C1107</td><td>Per project specification</td></tr>
+<tr><td>Fresh concrete (slump)</td><td>ASTM C143</td><td>BS EN 12350</td></tr>
+<tr><td>Hardened concrete (cubes / cylinders)</td><td>ASTM C39</td><td>BS EN 12390</td></tr>
+<tr><td>Ready-mix specification and delivery</td><td>ASTM C94</td><td>BS EN 206</td></tr>
+<tr><td>Soil in-place density</td><td>ASTM D1556 (sand cone)</td><td>Per project specification</td></tr>
+<tr><td>Quality management</td><td>ACI 318 Chapter 26</td><td>ISO 9001</td></tr></table>
+<h2>Two rules on site</h2>
+<ul><li><strong>Do not mix systems on one bolt.</strong> A bolt is ASTM F1554 or ISO 898-1, not both. Match whichever system your drawings use.</li>
+<li><strong>Rules of thumb are not code minimums.</strong> Embedment around 10 &times; diameter and edge distance around 5 &times; diameter are field rules; ACI 318 Chapter 17 or EN 1992-4 calculations for the actual load case govern.</li></ul>
+<h2>Other national codes</h2>
+<p>Many countries publish their own concrete and steel codes (for example CSA A23.3 and CSA S16 in Canada, IS 456 and IS 800 in India). The guide does not cover them; the site sequence and hold points are the same, and the numbers come from your project specification.</p>
+""",
+"faq": [
+("Which standard covers anchor bolt grades?", "ASTM F1554 (Grades 36, 55, 105) in the American system; ISO 898-1 property classes such as 8.8 and 10.9 in the metric system."),
+("Which code governs anchor design in concrete?", "ACI 318 Chapter 17 or EN 1992-4, depending on the project."),
+("What is AISC Design Guide 1?", "The AISC design guide for base plates and anchor rods."),
+("Which standard applies to non-shrink grout under base plates?", "ASTM C1107 (packaged dry, hydraulic-cement grout, non-shrink)."),
+],
+"related": ["astm-f1554-grades", "anchor-bolt-embedment-depth", "base-plate-non-shrink-grout"],
+},
+{
+"slug": "anchor-bolts-for-civil-engineering-students",
+"title": "Anchor bolts explained for civil engineering students",
+"desc": "What anchor bolts do, the grades, the template method, the site sequence and the mistakes new engineers make, in one page for civil and structural engineering students.",
+"chapter": None, "img": "p-contents",
+"answer": "Anchor bolts are cast into the concrete foundation and connect it to the steel column's base plate. On site they are set with a template that matches the base plate, levelled and fixed before the pour, protected until erection, and checked at hold points. Design sets the grade, diameter and embedment; site execution decides whether the column will fit.",
+"body": f"""
+<p>University teaches you how to design a foundation. The site asks you to build one. Whether it is a warehouse, a pre-engineered building, a transmission tower or a car-park shade, the anchor bolts are the silent, permanent link between the concrete below and the steel above, and a 2 mm error is enough to stop the erection crew.</p>
+<h2>The five things to know before your first site</h2>
+<ol><li><strong>The drawings come first.</strong> Check the bolt plan against the latest issued-for-construction revision and the steel shop drawings. <a href="{BASE}/articles/steel-structure-foundation-sequence/">The full foundation sequence</a></li>
+<li><strong>Grade and diameter are set by design.</strong> ASTM F1554 Grade 36, 55 or 105, or ISO 8.8 / 10.9. Measure every bolt with a caliper. <a href="{BASE}/articles/astm-f1554-grades/">Grades explained</a></li>
+<li><strong>The template holds the pattern.</strong> Same holes, diameter, spacing and arrangement as the base plate, with a centre nail on the survey point. <a href="{BASE}/articles/anchor-bolt-template/">Template method</a></li>
+<li><strong>Tolerances are small.</strong> <a href="{BASE}/articles/anchor-bolt-tolerances/">Typical tolerances</a> for position, spacing, projection and level.</li>
+<li><strong>Nothing is poured without a signature.</strong> <a href="{BASE}/articles/qa-qc-hold-points-steel-structure-foundations/">The 10 QA/QC hold points</a></li></ol>
+<h2>Mistakes new engineers make</h2>
+<ul><li>Setting out from the formwork instead of survey control.</li>
+<li>Approving a shortcut on the spot to be polite. <a href="{BASE}/articles/first-day-on-site-new-engineer/">Your first site as a new engineer</a></li>
+<li>Bending or heating a misaligned bolt instead of asking the structural engineer. <a href="{BASE}/articles/misaligned-anchor-bolts/">The right corrections</a></li></ul>
+<h2>For a thesis, a report or an interview</h2>
+<p>The <a href="{BASE}/articles/anchor-bolt-foundation-standards-codes/">standards table</a> lists which code covers what, and the <a href="{BASE}/articles/anchor-bolt-interview-questions-qa-qc/">interview questions page</a> has short answers to the questions site and QA/QC interviews ask.</p>
+""",
+"faq": [
+("What is an anchor bolt in a steel structure?", "A bolt cast into the concrete foundation that connects it to the steel column's base plate."),
+("Do civil engineering students learn anchor bolt installation?", "Courses usually cover design; site execution (template, setting out, hold points, fixes) is learned on site or from field guides and training."),
+("What is the most important tool for setting anchor bolts?", "The anchor bolt template, drilled to match the column base plate."),
+],
+"related": ["first-day-on-site-new-engineer", "anchor-bolt-interview-questions-qa-qc", "steel-structure-foundation-sequence"],
+},
+{
+"slug": "anchor-bolt-interview-questions-qa-qc",
+"title": "Anchor bolt and foundation interview questions for site and QA/QC engineers (with answers)",
+"desc": "15 questions asked in site engineer and QA/QC engineer interviews on anchor bolts, templates, grades, hold points, concrete tests and field fixes, with short field answers.",
+"chapter": None, "img": "p-troubleshooting",
+"answer": "Interviews for site and QA/QC roles on steel-structure projects test the template method, ASTM F1554 grades, tolerances and corrections for misaligned bolts, the pre-pour final gate, cube testing and who approves field fixes. The short answers below come from the field guide.",
+"body": """
+<p>Use these to prepare, then explain each answer with an example from your own site. Interviewers listen for the sequence and for who has authority to approve.</p>
+<h2>Questions and short answers</h2>
+<ol>
+<li><strong>What is an anchor bolt template for?</strong> It holds the bolt group in the base plate's exact pattern during the pour, and is kept to drill the base plates.</li>
+<li><strong>What are the ASTM F1554 grades?</strong> Grade 36 (250 MPa yield), 55 (380 MPa), 105 (720 MPa).</li>
+<li><strong>Can a bolt be specified as both F1554 and ISO 8.8?</strong> No. They are separate systems; follow the drawings.</li>
+<li><strong>How do you verify bolt diameter?</strong> With a caliper, on every bolt, yourself. 22 mm and 24 mm look identical by eye.</li>
+<li><strong>Where do you set out anchor bolts from?</strong> Survey control and offset pegs, never from the formwork.</li>
+<li><strong>Bolts are 4 mm out after casting. What do you do?</strong> Check the base plate first: holes are normally oversized (bolt diameter + 3-6 mm).</li>
+<li><strong>And 10 mm out?</strong> Consult the structural engineer; slotted holes with thick hardened plate washers may be permitted.</li>
+<li><strong>And 20 mm out?</strong> Do not bend the bolts. With the structural engineer's approval, cut them and install post-installed anchors next to them.</li>
+<li><strong>Can you heat a bolt to bend it into place?</strong> Not without the structural engineer's approval; bending and heating reduce capacity.</li>
+<li><strong>What is the final gate?</strong> The pre-concrete inspection of bolts, rebar, formwork, levels and cleanliness, signed by the consultant or client. No signature, no pour.</li>
+<li><strong>Blow or wash first?</strong> Blow out debris with compressed air, then wash. Washing first makes mud.</li>
+<li><strong>How do you protect threads during the pour?</strong> Masking tape or caps, then caps and marking until erection.</li>
+<li><strong>How many cubes per sample, and when are they broken?</strong> Typically 3, at 7, 14 and 28 days (BS EN 12390), per project specification.</li>
+<li><strong>The 28-day result is low. What do you do?</strong> Notify the designer immediately. The designer decides on re-check, cores or strengthening.</li>
+<li><strong>Which grout goes under base plates?</strong> Non-shrink grout to ASTM C1107; for gaps over 50 mm, a coarse-aggregate or epoxy grout.</li>
+</ol>
+""",
+"faq": [
+("What do QA/QC interviews ask about anchor bolts?", "Template method, grades, tolerances, corrections for misaligned bolts, the pre-pour final gate, cube testing, and who approves field fixes."),
+("What should you never do with a misaligned anchor bolt?", "Bend or heat it without the structural engineer's approval."),
+("Who approves anchor bolt field fixes?", "The structural engineer."),
+],
+"related": ["qa-qc-hold-points-steel-structure-foundations", "misaligned-anchor-bolts", "anchor-bolts-for-civil-engineering-students"],
+},
+]
+
+AUDIENCES = [
+    ("For QA/QC engineers and inspectors", ["qa-qc-hold-points-steel-structure-foundations", "pre-pour-checklist", "concrete-testing-foundations-slump-cubes",
+     "anchor-bolt-tolerances", "anchor-bolt-failures-common-causes", "anchor-bolt-interview-questions-qa-qc"]),
+    ("For engineering students and new graduates", ["anchor-bolts-for-civil-engineering-students", "first-day-on-site-new-engineer", "steel-structure-foundation-sequence",
+     "anchor-bolt-foundation-standards-codes", "astm-f1554-grades", "anchor-bolt-interview-questions-qa-qc"]),
+]
