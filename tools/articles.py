@@ -776,9 +776,161 @@ ARTICLES += [
 ],
 "related": ["qa-qc-hold-points-steel-structure-foundations", "misaligned-anchor-bolts", "anchor-bolts-for-civil-engineering-students"],
 },
+
+{"slug": "steel-structure-inspection-checklist", "chapter": None, "src": "Steel inspection reference note &middot; the guide itself covers the foundation stage", "img": "p-qaqc",
+"title": "Steel structure inspection checklist for QA/QC inspectors (receiving to final bolting)",
+"desc": "Steel structure inspection in 6 stages: anchor-bolt survey, material receiving, erection, bolting, welding and coatings, with the standard and the record for each.",
+"answer": "A steel-structure inspection runs in six stages: as-built survey of the anchor bolts before erection, material receiving against mill certificates, erection and plumbness, bolting, welding, then coatings and touch-up. Each stage is checked against the project specification and the referenced standard, and each leaves a signed record.",
+"body": f"""<p>Steel is inspected at every hand-over: from the foundation crew to the erector, from the fabricator to the site, and from the erector to the painter. A defect found at the right stage costs a phone call; found after the cladding is on, it costs a crane.</p>
+<h2>The 6 stages</h2>
+<table><tr><th>Stage</th><th>What the inspector checks</th><th>Typical reference</th><th>Record</th></tr>
+<tr><td>1. Before erection</td><td>As-built survey of anchor-bolt positions, projection and top-of-grout levels</td><td>Project tolerances, AISC Code of Standard Practice</td><td>Anchor-bolt as-built survey</td></tr>
+<tr><td>2. Material receiving</td><td>Grade, heat number, section size, marking, damage; mill certificates</td><td>ASTM A6 / EN 10204 type 3.1</td><td>Receiving report</td></tr>
+<tr><td>3. Erection</td><td>Column plumbness, alignment, elevations, temporary bracing</td><td>AISC 303 / EN 1090-2</td><td>Erection survey</td></tr>
+<tr><td>4. Bolting</td><td>Bolt grade, washers, snug-tight or pretension method</td><td>RCSC Specification / EN 1090-2</td><td>Bolting inspection log</td></tr>
+<tr><td>5. Welding</td><td>Welder qualification, WPS, visual inspection, NDT as specified</td><td>AWS D1.1 / ISO 5817 / CSA W59</td><td>Weld inspection and NDT reports</td></tr>
+<tr><td>6. Coatings</td><td>Surface preparation, dry film thickness, galvanizing damage repair</td><td>SSPC / ISO 8501-1 / ISO 19840 / ISO 1461</td><td>Coating inspection report</td></tr></table>
+<h2>Start with the foundation</h2>
+<p>Most erection problems begin at the anchor bolts. Before the first column arrives, survey every bolt group: position, projection above concrete and thread condition. A bolt that is 20 mm out is a fix on paper today and a problem with a column hanging on the crane tomorrow. The guide's <a href="{BASE}/articles/pre-pour-checklist/">pre-pour checklist</a> and <a href="{BASE}/articles/anchor-bolt-tolerances/">tolerance table</a> cover that stage.</p>
+<h2>What governs</h2>
+<p>The project specification and the inspection and test plan (ITP) govern. The standards in the table are the common references; the project names the ones that apply and the acceptance criteria.</p>""",
+"faq": [("What are the stages of steel structure inspection?", "Anchor-bolt survey before erection, material receiving, erection and plumbness, bolting, welding, and coatings."),
+        ("Which standard governs steel erection inspection?", "The project specification. Common references are the AISC Code of Standard Practice (AISC 303) in North America and EN 1090-2 in Europe."),
+        ("Why survey anchor bolts before steel erection?", "Because misplaced bolts are cheapest to correct before a column is lifted, and the correction must be approved by the structural engineer.")],
+"related": ["high-strength-bolt-tightening-inspection", "structural-welding-visual-inspection", "steel-erection-tolerances-plumbness"]},
+
+{"slug": "high-strength-bolt-tightening-inspection", "chapter": None, "src": "Steel inspection reference note &middot; the guide itself covers the foundation stage", "img": "p-standards",
+"title": "High-strength bolt tightening inspection: snug-tight, turn-of-nut, DTI and TC bolts",
+"desc": "How QA/QC inspectors check structural bolting: snug-tight vs pretensioned joints, turn-of-nut rotation, calibrated wrench, DTI washers and twist-off bolts (RCSC, ASTM F3125).",
+"answer": "First confirm the joint type on the drawings: snug-tight, pretensioned or slip-critical. Pretensioned joints are tightened by one of four methods (turn-of-nut, calibrated wrench, twist-off tension-control bolts or direct tension indicators), and the inspector verifies the method with a pre-installation check on site, not by torquing finished bolts at random.",
+"body": f"""<h2>Three joint types</h2>
+<ul><li><strong>Snug-tight:</strong> plies in firm contact, tightened by a few impacts of an impact wrench or the full effort of an ironworker with an ordinary spud wrench.</li>
+<li><strong>Pretensioned:</strong> bolts brought to a minimum tension by an approved method.</li>
+<li><strong>Slip-critical:</strong> pretensioned, plus faying surfaces prepared to the specified slip class (no paint or galvanizing unless qualified).</li></ul>
+<h2>Four pretensioning methods (RCSC Specification)</h2>
+<table><tr><th>Method</th><th>What the inspector watches</th></tr>
+<tr><td>Turn-of-nut</td><td>Snug first, match-mark nut and bolt, then the specified rotation (1/3 turn for bolt length up to 4 diameters, 1/2 turn over 4 to 8, 2/3 turn over 8 to 12, for faces normal to the axis)</td></tr>
+<tr><td>Calibrated wrench</td><td>Daily calibration with a tension calibrator (Skidmore-Wilhelm) for each lot, diameter and length</td></tr>
+<tr><td>Twist-off (TC) bolts</td><td>Spline sheared off; bolts pre-checked in the tension calibrator</td></tr>
+<tr><td>Direct tension indicator (DTI)</td><td>Feeler-gauge refusals in the specified number of gaps</td></tr></table>
+<h2>Material checks before any bolting</h2>
+<p>Bolt grade marking (ASTM F3125 Grade A325 or A490, or ISO property class 8.8 / 10.9 under EN 14399), nut and washer grades, galvanized or plain as specified, and storage: bolts kept dry and lubricated, not left loose in the rain.</p>
+<h2>Common mistakes</h2>
+<ul><li>Checking torque on finished bolts as the acceptance test.</li><li>Reusing pretensioned A490 or galvanized bolts.</li><li>Tightening from the edges of a large joint inwards instead of from the stiffest part outwards.</li></ul>
+<p>Anchor rods in the foundation are a different item: they are usually snug-tight unless the drawings say otherwise. See <a href="{BASE}/articles/astm-f1554-grades/">ASTM F1554 grades</a>.</p>""",
+"faq": [("What is the turn-of-nut method?", "The bolt is first snug-tightened, nut and bolt are match-marked, then the nut is rotated a specified amount depending on bolt length, for example 1/3 turn for lengths up to 4 diameters."),
+        ("Can you check pretension with a torque wrench after installation?", "Not as the acceptance test. The RCSC approach is a pre-installation verification of the method, then routine observation that the method is followed."),
+        ("Can A490 bolts be reused?", "No. A490 bolts and galvanized A325 bolts must not be reused once pretensioned.")],
+"related": ["steel-structure-inspection-checklist", "structural-welding-visual-inspection", "astm-f1554-grades"]},
+
+{"slug": "structural-welding-visual-inspection", "chapter": None, "src": "Steel inspection reference note &middot; the guide itself covers the foundation stage", "img": "p-qaqc",
+"title": "Structural welding visual inspection: defects, NDT methods and AWS D1.1 / ISO 5817",
+"desc": "What a welding inspector checks on structural steel before, during and after welding: WPS, welder qualification, cracks, undercut, porosity, and when MT, UT, PT or RT is used.",
+"answer": "Visual inspection is done before, during and after welding. Before: WPS, welder qualification, fit-up and cleanliness. During: preheat, interpass temperature and consumables. After: weld size and profile, cracks, undercut, porosity, overlap and incomplete fusion. NDT (MT, PT, UT or RT) is added where the specification requires it.",
+"body": f"""<h2>Before welding</h2><ul><li>Approved welding procedure specification (WPS) for the joint and position.</li><li>Welder qualification valid for the process and position.</li><li>Fit-up: root opening, bevel angle, alignment, backing.</li><li>Joint clean and dry; consumables stored as specified (low-hydrogen electrodes kept in an oven).</li></ul>
+<h2>During welding</h2><ul><li>Preheat and interpass temperature measured.</li><li>Settings within the WPS range.</li><li>Cleaning between passes; back-gouging where required.</li></ul>
+<h2>After welding: visual defects</h2>
+<table><tr><th>Defect</th><th>What it looks like</th></tr>
+<tr><td>Crack</td><td>Any crack is rejected under the common codes</td></tr>
+<tr><td>Undercut</td><td>Groove melted into the base metal at the toe</td></tr>
+<tr><td>Porosity</td><td>Gas pores on the surface</td></tr>
+<tr><td>Overlap</td><td>Weld metal rolled onto the base metal without fusion</td></tr>
+<tr><td>Incomplete fusion or penetration</td><td>Lack of bond with base metal or root</td></tr>
+<tr><td>Undersize or excessive convexity</td><td>Fillet size measured with a weld gauge</td></tr></table>
+<p>Acceptance limits come from the code the project names: AWS D1.1 (USA), CSA W59 (Canada) or the quality level of ISO 5817 called by EN 1090-2 (Europe).</p>
+<h2>NDT methods</h2>
+<ul><li><strong>MT</strong> (magnetic particle): surface and near-surface cracks in ferromagnetic steel.</li><li><strong>PT</strong> (dye penetrant): surface-breaking defects.</li><li><strong>UT</strong> (ultrasonic): internal defects in full-penetration welds.</li><li><strong>RT</strong> (radiography): internal defects, less common on site.</li></ul>""",
+"faq": [("What does a welding inspector check?", "WPS and welder qualification before welding, preheat and parameters during welding, and size, profile and defects after welding, plus NDT when specified."),
+        ("Which standard sets weld acceptance on structural steel?", "AWS D1.1 in the USA, CSA W59 in Canada, and ISO 5817 quality levels under EN 1090-2 in Europe, as named by the project."),
+        ("What is the difference between MT and UT?", "MT finds surface and near-surface cracks; UT finds internal defects in full-penetration welds.")],
+"related": ["steel-structure-inspection-checklist", "steel-inspector-certifications", "high-strength-bolt-tightening-inspection"]},
+
+{"slug": "steel-erection-tolerances-plumbness", "chapter": None, "src": "Steel inspection reference note &middot; the guide itself covers the foundation stage", "img": "p-standards",
+"title": "Steel erection tolerances: column plumbness, base plates and anchor bolts",
+"desc": "Steel erection tolerances for QA/QC inspectors: column out-of-plumb 1/500 (AISC 303), base plate and anchor-bolt checks, and how the foundation tolerances feed the erection survey.",
+"answer": "Under the AISC Code of Standard Practice (AISC 303), an individual column may be out of plumb by no more than 1/500 of its height between working points. EN 1090-2 sets its own erection tolerances. Erection accuracy starts at the foundation: anchor-bolt position and top-of-grout level must be within tolerance before the column is set.",
+"body": f"""<h2>What the erection survey checks</h2>
+<ul><li>Column plumbness at each level against 1/500 (AISC 303) or the EN 1090-2 limit the project names.</li><li>Column base position against grid lines.</li><li>Base plate elevation and full bearing on grout.</li><li>Beam elevations and alignment.</li></ul>
+<h2>Why the foundation decides</h2>
+<p>The erector can shim and plumb a column only within the play allowed by the base-plate holes. If the bolts are out of tolerance, the column cannot be set where the drawing shows it. That is why the guide treats the <a href="{BASE}/articles/anchor-bolt-tolerances/">anchor-bolt tolerances</a> and the <a href="{BASE}/articles/pre-pour-checklist/">pre-pour gate</a> as the start of the steel tolerance chain.</p>
+<h2>Base plates and grout</h2>
+<p>Columns are set on levelling nuts or shims, plumbed, then grouted with non-shrink grout. Check grout fill under the whole plate before final loading. See <a href="{BASE}/articles/base-plate-non-shrink-grout/">base plate grouting</a>.</p>""",
+"faq": [("What is the column plumbness tolerance in AISC 303?", "An individual column may be out of plumb by up to 1/500 of the distance between working points, with additional limits for exterior and elevator columns."),
+        ("Where do steel erection tolerances start?", "At the foundation: anchor-bolt position, projection and top-of-grout level."),
+        ("Which European standard covers steel erection tolerances?", "EN 1090-2.")],
+"related": ["anchor-bolt-tolerances", "steel-structure-inspection-checklist", "misaligned-anchor-bolts"]},
+
+{"slug": "steel-coating-galvanizing-inspection", "chapter": None, "src": "Steel inspection reference note &middot; the guide itself covers the foundation stage", "img": "p-qaqc",
+"title": "Steel coating and galvanizing inspection: surface preparation, DFT and repair",
+"desc": "Coating inspection on structural steel: blast cleaning grade (Sa 2½, SSPC-SP 10), dry film thickness measurement (SSPC-PA 2, ISO 19840), galvanizing (ASTM A123, ISO 1461) and touch-up.",
+"answer": "Coating inspection checks four things: surface preparation grade and profile before painting, ambient conditions (dew point), dry film thickness with a calibrated gauge to SSPC-PA 2 or ISO 19840, and repair of damage after erection. Galvanized steel is checked for coating thickness to ASTM A123 or ISO 1461, and damaged areas are repaired as the project specifies.",
+"body": f"""<h2>Before painting</h2><ul><li>Surface preparation grade: for example Sa 2½ (ISO 8501-1) or SSPC-SP 10 near-white blast.</li><li>Surface profile measured with replica tape or a profile gauge.</li><li>Steel temperature at least 3 &deg;C above the dew point (common rule in coating specifications).</li></ul>
+<h2>Dry film thickness (DFT)</h2>
+<p>Measured with a calibrated magnetic gauge. SSPC-PA 2 sets the number and location of readings in North America. ISO 19840 is often used with an acceptance rule that no more than 20% of readings fall below nominal and none below 80% of nominal, unless the specification says otherwise.</p>
+<h2>Galvanizing</h2><ul><li>Coating thickness against ASTM A123 or ISO 1461 tables for the steel thickness.</li><li>No bare spots, dross or flux inclusions.</li><li>Damaged areas repaired with zinc-rich paint or another method the specification accepts (ASTM A780 in the USA).</li></ul>
+<p>Galvanized anchor rods follow ASTM F2329 / A153; check that nuts were tapped oversize after galvanizing so they run freely.</p>""",
+"faq": [("What is Sa 2½?", "A near-white blast-cleaning grade defined in ISO 8501-1, equivalent in practice to SSPC-SP 10."),
+        ("How is dry film thickness measured?", "With a calibrated magnetic gauge, following SSPC-PA 2 or ISO 19840 for the number of readings and acceptance."),
+        ("How is damaged galvanizing repaired?", "With zinc-rich paint, zinc spray or solder as the specification allows; ASTM A780 covers repair methods in the USA.")],
+"related": ["steel-structure-inspection-checklist", "steel-material-receiving-mill-certificates", "anchor-bolt-foundation-standards-codes"]},
+
+{"slug": "steel-material-receiving-mill-certificates", "chapter": None, "src": "Steel inspection reference note &middot; the guide itself covers the foundation stage", "img": "p-standards",
+"title": "Steel material receiving inspection and mill test certificates (EN 10204 3.1)",
+"desc": "How to receive structural steel, bolts and anchor rods on site: check the mill test certificate, heat number traceability, grade marking, dimensions and damage.",
+"answer": "Match every delivery to its mill test certificate: grade, heat number, chemical composition and mechanical results must match the specification, and the heat number on the piece must match the certificate. Then check marking, dimensions, straightness and damage, and quarantine anything that does not match.",
+"body": f"""<h2>Receiving checklist</h2>
+<ol><li>Delivery note matches the order and the drawing marks.</li><li>Mill test certificate (EN 10204 type 3.1 where specified) for each heat.</li><li>Heat number on the steel matches the certificate.</li><li>Grade meets the specification (for example ASTM A992, A572 Gr 50 or EN 10025 S355).</li><li>Section size and plate thickness checked with a tape and calliper.</li><li>No bends, dents, lamination or coating damage from transport.</li><li>Bolts, nuts and washers: grade markings, lot numbers, certificates.</li><li>Anchor rods: grade colour code (ASTM F1554 Grade 36 blue, 55 yellow, 105 red), thread length, galvanizing.</li></ol>
+<h2>What to do with a mismatch</h2>
+<p>Tag it, keep it apart, and write a non-conformance report. Do not install material without a matching certificate.</p>
+<p>The same check applies to reinforcement before it goes into the foundation: <a href="{BASE}/articles/qa-qc-hold-points-steel-structure-foundations/">hold point 5</a>.</p>""",
+"faq": [("What is an EN 10204 3.1 certificate?", "An inspection certificate issued by the manufacturer's authorized inspector, independent of production, with actual test results for the delivered product."),
+        ("What is the colour code for ASTM F1554 anchor rods?", "Grade 36 blue, Grade 55 yellow, Grade 105 red, on the end of the rod."),
+        ("What if the heat number does not match the certificate?", "Quarantine the material and raise a non-conformance report; do not install it.")],
+"related": ["astm-f1554-grades", "steel-structure-inspection-checklist", "steel-coating-galvanizing-inspection"]},
+
+{"slug": "steel-inspector-certifications", "chapter": None, "src": "Steel inspection reference note &middot; the guide itself covers the foundation stage", "img": "p-contents",
+"title": "Steel structure and welding inspector certifications: CWI, CSWIP 3.1, CWB, ASNT, AMPP",
+"desc": "Which certifications QA/QC inspectors and engineering graduates pursue for steel structures worldwide: AWS CWI, CSWIP 3.1, CWB/CSA W178.2, ASNT NDT, AMPP coating inspector, ISO 9001 auditor.",
+"answer": "The main credentials are AWS CWI (USA and many international projects), CSWIP 3.1 Welding Inspector (UK, Middle East, Asia), CWB inspector certification to CSA W178.2 (Canada), ASNT or ISO 9712 NDT levels for testing, and the AMPP (formerly NACE) Coating Inspector Program. The right one depends on where you work and which code the projects use.",
+"body": f"""<table><tr><th>Credential</th><th>Body</th><th>Where it is common</th></tr>
+<tr><td>Certified Welding Inspector (CWI)</td><td>American Welding Society</td><td>USA, AWS D1.1 projects worldwide</td></tr>
+<tr><td>CSWIP 3.1 Welding Inspector</td><td>TWI Certification</td><td>UK, Gulf, Asia</td></tr>
+<tr><td>Welding inspector (CSA W178.2)</td><td>Canadian Welding Bureau</td><td>Canada</td></tr>
+<tr><td>NDT Level II / III</td><td>ASNT or ISO 9712 schemes</td><td>Worldwide, method by method</td></tr>
+<tr><td>Coating Inspector Program</td><td>AMPP (formerly NACE)</td><td>Oil and gas, industrial, worldwide</td></tr>
+<tr><td>ISO 9001 internal or lead auditor</td><td>Various training bodies</td><td>Quality systems</td></tr></table>
+<h2>What certifications do not cover</h2>
+<p>None of these teach the foundation stage: survey, anchor-bolt setting, pre-pour hold points and concrete testing. Most steel problems on site start there. That gap is what the <a href="{BASE}/">Anchor Bolt Field Guide</a> and the <a href="{BASE}/training/">workshop</a> cover.</p>
+<p>Preparing for an interview? See <a href="{BASE}/articles/anchor-bolt-interview-questions-qa-qc/">15 QA/QC interview questions</a>.</p>""",
+"faq": [("What certification does a steel structure inspector need?", "It depends on the region and code: AWS CWI, CSWIP 3.1, CWB/CSA W178.2 in Canada, plus NDT or coating certifications for those tasks."),
+        ("Is CSWIP 3.1 equivalent to AWS CWI?", "Both certify welding inspectors; CSWIP 3.1 is more common on UK and Gulf projects and CWI on AWS D1.1 projects. Employers decide which they accept."),
+        ("What is AMPP?", "The Association for Materials Protection and Performance, formed from NACE International and SSPC; it runs the Coating Inspector Program.")],
+"related": ["structural-welding-visual-inspection", "anchor-bolt-interview-questions-qa-qc", "anchor-bolts-for-civil-engineering-students"]},
+
+{"slug": "anchor-bolt-survey-before-steel-erection", "chapter": 14, "img": "p-troubleshooting",
+"title": "Anchor bolt survey before steel erection: projection, position and thread checks",
+"desc": "The as-built anchor-bolt survey before the steel erector arrives: projection above concrete (+25 / -6 mm per the guide's table), group position, spacing, top elevation and threads.",
+"answer": "Before erection, survey every bolt group after the concrete has set: group position against the grid, spacing within the group, top-of-bolt elevation, projection above concrete and thread condition. The guide's table allows +25 / -6 mm on projection (per the detail). Record the results and send out-of-tolerance bolts to the structural engineer before the steel arrives.",
+"body": f"""<h2>What to measure on each group</h2>
+<table><tr><th>Check</th><th>How</th></tr>
+<tr><td>Group position against grid lines</td><td>Total station or tape from control lines</td></tr>
+<tr><td>Spacing between bolts in the group</td><td>Tape, against the base-plate hole pattern</td></tr>
+<tr><td>Top-of-bolt elevation</td><td>Level from the benchmark</td></tr>
+<tr><td>Projection above concrete</td><td>Tape: enough thread for washer, nut and full engagement</td></tr>
+<tr><td>Threads and verticality</td><td>Run a nut on by hand; check with a square</td></tr></table>
+<h2>Why projection matters</h2>
+<p>Too short and the nut cannot fully engage; too long and the bolt may bottom out in the column or interfere with the finish. Projection is set on the template by the levelling nuts before the pour; see the <a href="{BASE}/articles/anchor-bolt-template/">template article</a>.</p>
+<h2>What happens with a bad bolt</h2>
+<p>It goes back to the structural engineer. Common approved fixes are in <a href="{BASE}/articles/misaligned-anchor-bolts/">misaligned anchor bolts</a>; heating, bending or cutting without approval is not one of them.</p>""",
+"faq": [("What is the anchor bolt projection tolerance?", "The guide's table gives +25 mm / -6 mm for projection above concrete, per the detail; the project drawings govern."),
+        ("When should anchor bolts be surveyed?", "After the concrete sets and before the steel erector mobilises, so fixes can be approved in time."),
+        ("Who approves a fix for an out-of-tolerance anchor bolt?", "The structural engineer.")],
+"related": ["anchor-bolt-tolerances", "steel-erection-tolerances-plumbness", "misaligned-anchor-bolts"]},
 ]
 
 AUDIENCES = [
+    ("For steel structure and welding inspectors", ["steel-structure-inspection-checklist", "anchor-bolt-survey-before-steel-erection", "steel-material-receiving-mill-certificates",
+     "high-strength-bolt-tightening-inspection", "structural-welding-visual-inspection", "steel-erection-tolerances-plumbness", "steel-coating-galvanizing-inspection", "steel-inspector-certifications"]),
     ("For QA/QC engineers and inspectors", ["qa-qc-hold-points-steel-structure-foundations", "pre-pour-checklist", "concrete-testing-foundations-slump-cubes",
      "anchor-bolt-tolerances", "anchor-bolt-failures-common-causes", "anchor-bolt-interview-questions-qa-qc"]),
     ("For engineering students and new graduates", ["anchor-bolts-for-civil-engineering-students", "first-day-on-site-new-engineer", "steel-structure-foundation-sequence",
