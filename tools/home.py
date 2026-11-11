@@ -1,4 +1,4 @@
-from build import AUTHOR, AUTHOR_LD, BASE, GUMROAD, SITE, TITLE, buy
+from build import AMAZON, AUTHOR, AUTHOR_LD, BASE, GUMROAD, SITE, TITLE, buy
 from articles import ARTICLES
 
 pages = [("p-contents", "Contents: 15 chapters and appendices"), ("p-standards", "Reference standards and codes"),
@@ -44,5 +44,6 @@ HOME_LD = [{"@context": "https://schema.org", "@type": "Book", "name": TITLE, "a
             "bookEdition": "First Edition", "image": f"{SITE}/img/cover.jpg", "url": f"{SITE}/",
             "about": ["Anchor bolts", "Steel structure foundations", "Base plate grouting", "Construction QA/QC"],
             "audience": {"@type": "Audience", "audienceType": "Site engineers, structural engineers, QA/QC inspectors, engineering students"},
+            "sameAs": [AMAZON, GUMROAD],
             "offers": {"@type": "Offer", "price": "30.00", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "url": GUMROAD}},
            {"@context": "https://schema.org", "@type": "WebSite", "name": "Anchor Bolt Field Guide", "url": f"{SITE}/"}]

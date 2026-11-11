@@ -120,7 +120,7 @@ def cta(campaign):
 <p>62 pages, the full site sequence from drawing to grouted base plate: survey, excavation, blinding, rebar, the anchor-bolt template, QA/QC hold points and field fixes. Written by Hicham Zein Eddine, from 20+ years on steel-structure and foundation sites in Qatar, the UAE, Poland and Canada.</p>
 {buy(campaign)}</div></div>"""
 
-AUTHOR_LD = {"@type": "Person", "name": AUTHOR_NAME, "url": f"{SITE}/about/",
+AUTHOR_LD = {"@type": "Person", "@id": f"{SITE}/about/#person", "name": AUTHOR_NAME, "url": f"{SITE}/about/",
              "description": "20+ years of steel-structure and foundation site experience (Qatar, UAE, Poland, Canada)."}
 
 def article_ld(a):
