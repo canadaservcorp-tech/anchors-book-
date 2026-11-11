@@ -1,7 +1,7 @@
 from build import AMAZON, AUTHOR_NAME, BASE, GUMROAD, SITE, TITLE
 from training import EVENT_LD
 
-EMAIL = "canada.servcorp@gmail.com"
+EMAIL = "hisham@entretienlaval.ca"
 TOPICS = ["Anchor bolts and anchor-bolt templates", "Steel-structure foundations", "Steel erection method",
           "Base plates and non-shrink grout", "Pre-pour QA/QC hold points", "Civil site practice and supervision"]
 
