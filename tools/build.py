@@ -107,7 +107,7 @@ def page(path, title, desc, body, jsonld=None, og_type="article", image="img/og.
 <p>{DISCLAIMER}</p>
 <p>&copy; 2026 {AUTHOR}. Content adapted from <em>{TITLE}</em>.</p>
 <nav><a href="{BASE}/">Home</a> &middot; <a href="{BASE}/articles/">Articles</a> &middot; <a href="{BASE}/checklist/">Free pre-pour checklist</a> &middot; <a href="{BASE}/training/">Training</a> &middot; <a href="{BASE}/about/">About the author</a> &middot; <a href="{BASE}/fr/">Français</a> &middot; <a href="{BASE}/ar/">العربية</a> &middot; <a href="{GUMROAD}">Buy the guide</a></nav>
-<p class="credit">Website by <a href="https://www.ateliersurmesure.ca">Atelier Sur Mesure</a></p>
+<p class="credit">Website by <a href="https://www.ateliersurmesure.ca">Atelier Sur Mesure</a> &middot; Author's company: <a href="https://entretienlaval.ca/">Entretien Laval</a></p>
 </div></footer>
 <script src="https://www.ateliersurmesure.ca/t.js" defer></script>
 </body>
